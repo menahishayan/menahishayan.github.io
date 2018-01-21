@@ -7,17 +7,34 @@
             url = 'https://script.google.com/macros/u/0/s/AKfycbw_Xtp770ZR-tBQFrxcfOYum_wrW6UBoojfpBJHdjmXRfUbeoZ5/exec'
             
             $('#submit-form').on('click', function(e) {
-                                 e.preventDefault();
-                                 var jqxhr = $.ajax({
-                                                    url: url,
-                                                    method: "GET",
-                                                    dataType: "json",
-                                                    data: $form.serializeObject()
-                                                    }).success(
-                                                               // do something
-                                                               );
-                                 })
-            </script>
+                 e.preventDefault();
+                 var jqxhr = $.ajax({
+                      url: url,
+                      method: "GET",
+                      dataType: "json",
+                      data: $form.serializeObject()
+                 }).success(
+                      // do something
+                 );
+            })
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+                
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+                    
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            };
+        var selected1 = getUrlParameter('o');
+        if(selected1=='1')  $("#c1o1").attr("checked","checked");
+        else if(selected1=='2')  $("#c1o2").attr("checked","checked");
+        </script>
     </head>
     <body>
         
@@ -27,8 +44,8 @@
             
             <div>
                 <label><b>Would you rather</b></label><br>
-                <input type="radio" name="choice1" value="no">Buy a new Mechanical Uniform for Rs. 850/-<br>
-                <input type="radio" name="choice1" value="yes" >Borrow uniform from someone (that you don't know)<br>
+                <input type="radio" id="c1o1" name="choice1" value="no">Buy a new Mechanical Uniform for Rs. 850/-<br>
+                <input type="radio" id="c1o2" name="choice1" value="yes" >Borrow uniform from someone (that you don't know)<br>
             </div>
             
             
