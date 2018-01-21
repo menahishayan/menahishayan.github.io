@@ -17,6 +17,8 @@
                       // do something
                  );
             })
+        </script>
+        <script type="text/javascript">
             var getUrlParameter = function getUrlParameter(sParam) {
                 var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                 sURLVariables = sPageURL.split('&'),
@@ -33,7 +35,9 @@
             };
         var selected1 = getUrlParameter('op');
         $(document).ready(function(){
-                          alert("ready");
+                          $('#test')click(function(){
+                                          alert("The paragraph was clicked.");
+                                          });
         })
 
     //    if(selected1='1')  $("#c1o1").attr("checked","checked");
@@ -58,5 +62,6 @@
             </div>
             
         </form>
+        <button type="button" id="test">test</button>
     </body>
 </html>
