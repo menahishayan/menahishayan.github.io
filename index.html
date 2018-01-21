@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            
+            var $form = $('form#survey1from'),
+            url = 'https://script.google.com/macros/u/0/s/AKfycbw_Xtp770ZR-tBQFrxcfOYum_wrW6UBoojfpBJHdjmXRfUbeoZ5/exec'
+            
+            $('#submit-form').on('click', function(e) {
+                                 e.preventDefault();
+                                 var jqxhr = $.ajax({
+                                                    url: url,
+                                                    method: "GET",
+                                                    dataType: "json",
+                                                    data: $form.serializeObject()
+                                                    }).success(
+                                                               // do something
+                                                               );
+                                 })
+            </script>
+    </head>
+    <body>
+        
+        <h2>C-Cycle Survey</h2>
+        Quick survey for students of AMCEC who are in the Physics Cycle for 2nd Semester (2018)<br><br>
+        <form id="survey1from">
+            
+            <div>
+                <label><b>Would you rather</b></label><br>
+                <input type="radio" name="choice1" value="no">Buy a new Mechanical Uniform for Rs. 850/-<br>
+                <input type="radio" name="choice1" value="yes" >Borrow uniform from someone (that you don't know)<br>
+            </div>
+            
+            
+            <div>
+                <button type="submit"id="submit-form">Submit</button>
+            </div>
+            
+        </form>
+    </body>
+</html>
