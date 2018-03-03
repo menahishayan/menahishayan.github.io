@@ -56,24 +56,42 @@
             text-align: center;
         }
         
+        .mainView {
+                width: 15%;
+            }
+        
         @media only screen and (max-width: 768px) {
+            body {
+                padding: 15px;
+                padding-top: 30px;
+                background-color: #000044;
+                color: white;
+            }
+            
             h1 {
                 font-size: 26px;
+                color: #C0C0C0;
+                text-align: center;
             }
             h3 {
                 font-size: 20px;
+                color: #C0C0C0;
             }
             p {
                 font-size: 16px;
             }
             input {
-                padding: 20px;
-                margin-left: 15%;
+                padding: 12px;
                 font-size: 20px;
+                color: #000044;
+                background-color: #C0C0C0;
             }
             .result {
                 padding-top: 30px;
-                text-align: center;
+                padding-bottom: 30px;
+            }
+            .mainView {
+                width: 100%;
             }
         }
     </style>
@@ -82,25 +100,27 @@
         var app = angular.module('betaCalc', []);
             app.controller('myCtrl', function($scope) {
                 $scope.Math = window.Math;
-            $scope.filterValue = function($event){
-            if(isNaN(String.fromCharCode($event.keyCode))){
-                $event.preventDefault();
-            }
-        };
+                
+                $scope.filterValue = function($event){
+                if(isNaN(String.fromCharCode($event.keyCode))){
+                    $event.preventDefault();
+                }
+            };
         });
     </script>
     <body>
         <h1>&beta;-Angle Calculator</h1>
         <p>Calculates apparent angle made by a plane with respect to the Vertical Plane (VP) when it is inclined to both the Horizontal Plane (HP) and the Vertical Plane (VP).</p>
         <h3>Enter inclination to:</h2>
-        <div ng-app="betaCalc" ng-controller="myCtrl">
-        <form>
+        <div ng-app="betaCalc" ng-controller="myCtrl" class="mainView">
+        <center><form>
             <!--<div class="label">Inclination to HP:<br></div>-->
             <input type="text" ng-model="hp" placeholder="HP" required ng-keypress="filterValue($event)" size="4"> &nbsp;
             <!--<div class="label">Inclination to VP:<br></div>-->
             <input type="text" ng-model="vp" placeholder="VP" required ng-keypress="filterValue($event)" size="4"><br>
         </form>
-        <h1 id="demo" ng-if="hp && vp" class="result">&beta;-Angle: {{Math.round(Math.asin(Math.sin(vp*Math.PI/180)/Math.cos(hp*Math.PI/180))*180/Math.PI)}}&deg;</h3>
+        <h1 id="demo" ng-if="hp && vp" class="result">&beta;-Angle: {{Math.round(Math.asin(Math.sin(vp*Math.PI/180)/Math.cos(hp*Math.PI/180))*180/Math.PI)}}&deg;</h1></center>
         </div>
+        <hr class="subcontent">
     </body>
 </html>
