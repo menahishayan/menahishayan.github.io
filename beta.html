@@ -3,6 +3,13 @@
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Beta Angle Calculator</title>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5614336716241655",
+            enable_page_level_ads: true
+          });
+        </script>
     </head>
     <style>
    /*     input {
@@ -70,12 +77,12 @@
             
             h1 {
                 font-size: 26px;
-                color: #2F86D5;
+                color: #6d8ca9;
                 text-align: center;
             }
             h3 {
                 font-size: 20px;
-                color: #2F86D5;
+                color: #6d8ca9;
             }
             p {
                 font-size: 16px;
@@ -111,16 +118,17 @@
     <body>
         <h1>&beta;-Angle Calculator</h1>
         <p>Calculates apparent angle made by a plane with respect to the Vertical Plane (VP) when it is inclined to both the Horizontal Plane (HP) and the Vertical Plane (VP).</p>
-        <h3>Enter inclination to:</h2>
+        <h3>Enter inclination to:</h3>
         <div ng-app="betaCalc" ng-controller="myCtrl" class="mainView">
         <center><form>
             <!--<div class="label">Inclination to HP:<br></div>-->
-            <input type="text" ng-model="hp" placeholder="HP" required ng-keypress="filterValue($event)" size="4"> &nbsp;
+            <input type="text" ng-model="hp" placeholder="HP" required ng-keypress="filterValue($event)" size="4"> &nbsp;&nbsp;
             <!--<div class="label">Inclination to VP:<br></div>-->
             <input type="text" ng-model="vp" placeholder="VP" required ng-keypress="filterValue($event)" size="4"><br>
         </form>
         <h1 id="demo" ng-if="hp && vp" class="result">&beta;-Angle: {{Math.round(Math.asin(Math.sin(vp*Math.PI/180)/Math.cos(hp*Math.PI/180))*180/Math.PI)}}&deg;</h1></center>
         </div>
+        <p>Note: All angles are in degrees.</p>
         <hr class="subcontent">
     </body>
 </html>
