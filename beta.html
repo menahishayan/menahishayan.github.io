@@ -79,18 +79,24 @@
                 width: 30%;
             }
         .info {
-            margin:2%;
-            background-color: rgba(255,255,255,0.5);
-            -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.6);
-            -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.6);
-            box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.6);
+            margin:1%;
+            background-color: rgba(255,255,255,0.3);
+            -webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.3);
+            -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+            box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+            position: relative;
         }
         
         .media {
-            max-height: 32px;
-            padding: 10px;
-            margin-top: -20%;
+            max-height: 30px;
+            padding: 5px;
             
+        }
+        
+        .mediaholder {
+            position: absolute;
+            top: 52%;
+            left: 40%;
         }
         
         @media only screen and (max-width: 768px) {
@@ -130,7 +136,7 @@
                 width: 100%;
             }
             .info {
-                width: 96%;
+                width: 100%;
             }
         }
     </style>
@@ -166,11 +172,14 @@
             <br>Analytics<br>
         </div>
         <div class="info">
-            <center><img src="Name%20Card.png" width="70%"><br>
-            <span style="display:inline-block; width: 25%;"></span>
-            <a href="mailto:menahi.shayan@gmail.com" alt="Email"><img src="email.png" class="media"></a>
-            <a href="http://www.twitter.com/menahishayan" alt="Twitter"><img src="twit.png" class="media"></a>
-            <a href="http://www.twitter.com/menahishayan" alt="Instagram"><img src="instagram.png" class="media"></a></center>
+            <center><img src="Name%20Card.png" width="75%"><br></center>
+            
+            <div class="mediaholder">
+                <a href="mailto:menahi.shayan@gmail.com" alt="Email"><img src="email.png" class="media"></a>
+                <a href="http://www.twitter.com/menahishayan" alt="Twitter"><img src="twit.png" class="media"></a>
+                <a href="https://www.instagram.com/therealshayan/" alt="Instagram"><img src="instagram.png" class="media"></a>
+            </div>
+            
         </div>
     </body>
 </html>
