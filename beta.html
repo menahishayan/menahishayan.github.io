@@ -10,6 +10,7 @@
           gtag('config', 'UA-115056066-1');
         </script>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        <link rel="stylesheet" type="text/css" href="beta.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Beta Angle Calculator</title>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -20,136 +21,38 @@
           });
         </script>
     </head>
-    <style>
-   /*     input {
-            width: auto;
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="drags.js"></script>
+    <script type="text/javascript">
+        function openBeta() {
+            $('.alphaCalc').hide();
+            $('.betaCalc').show();
+            event.currentTarget.className += " active";
+            var othertab = document.getElementsByClassName("alpha_tab");
+            othertab[0].className = othertab[0].className.replace(" active", "");
         }
-        .label {
-            font-size: 18px;
-        }
-        @media only screen and (max-width: 768px) {
-            input {
-                width: 100%;
-                font-size: 22px;
-            }
-            .label {
-                font-size: 26px;
-            }
-        }*/
-    </style>
-    <style>
-        h1 {
-            font-family: "Open Sans";
-            font-size: 24px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: bold;
-            line-height: 26px;
-        }
-        h3 {
-            font-family: "Open Sans";
-            font-size: 18px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: bold;
-            line-height: 22px;
-        }
-        p {
-            font-family: "Open Sans";
-            font-size: 14px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 20px;
-        }
-        input {
-            font-family: "Open Sans";
-            font-size: 18px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: normal;
-            line-height: 22px;
-            text-align: center;
+        function openAlpha() {
+            $('.betaCalc').hide();
+            $('.alphaCalc').show();
+            event.currentTarget.className += " active";
+            var othertab = document.getElementsByClassName("beta_tab");
+            othertab[0].className = othertab[0].className.replace(" active", "");
         }
         
-        .mainView {
-                width: 15%;
-            }
-        .subcontent, .info {
-                width: 30%;
-            }
-        .info {
-            margin:1%;
-            background-color: rgba(155,155,155,0.3);
-            -webkit-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.3);
-            -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
-            box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
-            position: fixed;
-            margin-left: 35%;
-            bottom: 15%;
-        }
-        
-        .media {
-            max-height: 30px;
-            padding: 5px;
-            padding-left: 15px;
+        $(document).ready(function(){
+                $( '.info' ).drags();
             
-        }
-        
-       .mediaholder {
-            position: absolute;
-            right: 5%; 
-           top: 12%;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            body {
-                padding: 10px;
-                padding-top: 20px;
-                background-color: #2b2b2b;
-                color: white;
-            }
-            
-            h1 {
-                font-size: 26px;
-                color: #6d8ca9;
-                text-align: center;
-            }
-            h3 {
-                font-size: 20px;
-                color: #6d8ca9;
-            }
-            p {
-                font-size: 16px;
-            }
-            input {
-                padding: 12px;
-                font-size: 20px;
-                color: #2b2b2b;
-                background-color: #C0C0C0;
-            }
-            .result {
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-            .mainView {
-                width: 100%;
-            }
-            .subcontent {
-                width: 100%;
-            }
-            .info {
-                width: 95%;
-                background-color: rgba(255,255,255,0.4);
-                position: fixed;
-                bottom: 2%;
-                margin-left: -2.5%;
-            }
-        }
-    </style>
+                //$('.beta_tab').click();
+                var isMobile = window.matchMedia("only screen and (max-width: 768px)");
+
+                if (isMobile.matches) {
+                    document.getElementById("default_open").click();
+                }
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script>
-        var app = angular.module('betaCalc', []);
+        var app = angular.module('angleCalc', []);
             app.controller('myCtrl', function($scope) {
                 $scope.Math = window.Math;
                 
@@ -161,23 +64,51 @@
         });
     </script>
     <body>
-        <h1>&beta;-Angle Calculator</h1>
-        <p>Calculates apparent angle made by a plane with respect to the Vertical Plane (VP) when it is inclined to both the Horizontal Plane (HP) and the Vertical Plane (VP).</p>
-        <h3>Enter inclination to:</h3>
-        <div ng-app="betaCalc" ng-controller="myCtrl" class="mainView">
-        <center><form>
-            <!--<div class="label">Inclination to HP:<br></div>-->
-            <input type="text" ng-model="hp" placeholder="HP" required ng-keypress="filterValue($event)" size="4"> &nbsp;&nbsp;
-            <!--<div class="label">Inclination to VP:<br></div>-->
-            <input type="text" ng-model="vp" placeholder="VP" required ng-keypress="filterValue($event)" size="4"><br>
-        </form>
-        <h1 id="demo" ng-if="hp && vp" class="result">&beta;-Angle: {{Math.round(Math.asin(Math.sin(vp*Math.PI/180)/Math.cos(hp*Math.PI/180))*180/Math.PI)}}&deg;</h1></center>
+        
+        <div class="tab1"><button class="beta_tab"  onclick="openBeta()" id="default_open">&beta;</button></div>
+        <div class="tab2"><button class="alpha_tab"  onclick="openAlpha()">&alpha;</button></div>
+        
+        <div ng-app="angleCalc" ng-controller="myCtrl">
+        
+        
+            <div class="betaCalc">
+                <h1>&beta;-Angle Calculator</h1>
+                <p>Calculates apparent angle made by a plane with respect to the Vertical Plane (VP) when it is inclined to both the Horizontal Plane (HP) and the Vertical Plane (VP).</p>
+
+                <h3>Enter inclination to:</h3>
+
+                <center>
+                    <form>
+                        <input type="text" ng-model="hp1" placeholder="HP" required ng-keypress="filterValue($event)" size="4" class="input_b"> &nbsp;&nbsp;
+                        <input type="text" ng-model="vp1" placeholder="VP" required ng-keypress="filterValue($event)" size="4" class="input_b"><br>
+                    </form>
+
+                    <div id="demo" ng-if="hp1 && vp1" class="result_b">&beta;-Angle: {{Math.round(Math.asin(Math.sin(vp1*Math.PI/180)/Math.cos(hp1*Math.PI/180))*180/Math.PI)}}&deg;</div>
+                </center>
+                
+            </div>
+            
+            <div class="alphaCalc">
+                <h1>&alpha;-Angle Calculator</h1>
+                <p>Calculates apparent angle made by a plane with respect to the Horizontal Plane (HP) when it is inclined to both the Horizontal Plane (HP) and the Vertical Plane (VP).</p>
+
+                <h3>Enter inclination to:</h3>
+
+                <center>
+                    <form>
+                        <input type="text" ng-model="hp2" placeholder="HP" required ng-keypress="filterValue($event)" size="4" class="input_a"> &nbsp;&nbsp;
+                        <input type="text" ng-model="vp2" placeholder="VP" required ng-keypress="filterValue($event)" size="4" class="input_a"><br>
+                    </form>
+
+                    <div id="demo" ng-if="hp2 && vp2" class="result_a">&alpha;-Angle: {{Math.round(Math.asin(Math.sin(hp2*Math.PI/180)/Math.cos(vp2*Math.PI/180))*180/Math.PI)}}&deg;</div>
+                </center>
+                
+            </div>
+            
         </div>
-        <p>Note: All angles are in degrees.</p>
-        <div class="subcontent">
-            <hr>
-            <br><br>
-        </div>
+        <center><p id="note">Note: All angles are in degrees.</p></center>
+        <div class="subcontent"></div>
+        
         <div class="info">
             <img src="Name2_1x.png" width="40%" style="padding: 10px;">
             
