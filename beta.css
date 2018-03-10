@@ -46,6 +46,9 @@ p {
     outline: none;
     background-color: #2b2b2b;
     border:0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     padding: 12px;
 }
 .input_a {  border-bottom:5px solid #e74c3c;    }
