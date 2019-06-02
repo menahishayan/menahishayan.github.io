@@ -1,0 +1,234 @@
+body {
+    font-family: "Open Sans", "Arial";
+    font-style: normal;
+    font-variant: normal;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+}
+
+.englishCalc > h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #719e19;
+}
+.arabicCalc > h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #719e19;
+}
+.englishCalc > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #719e19;
+}
+.arabicCalc > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #719e19;
+}
+p {
+    font-size: 14px;
+
+    font-weight: 400;
+    line-height: 20px;
+}
+a {
+    color: #719e19;
+    text-decoration: none;
+}
+a:hover {
+  color: #A7EB46;
+  text-decoration: none;
+}
+.input_a , .input_b {
+    font-size: 18px;
+    font-weight: normal;
+    width: 80px;
+    line-height: 22px;
+    text-align: center;
+    color: #719e19;
+    outline: none;
+    background-color: #ddd;
+    border:0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 12px;
+}
+.input_a {  border-bottom:5px solid #719e19;    }
+.input_b {  border-bottom:5px solid #719e19;    }
+.input_a:hover {   border-bottom:5px solid #A7EB46; }
+.input_b:hover {    border-bottom:5px solid #A7EB46;    }
+.input_a:active , .input_b:active {    border-bottom:5px solid white;    }
+.englishCalc {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    width: 30%;
+}
+.arabicCalc {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    width: 30%;
+}
+
+.result_b {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #719e19;
+    padding-top: 30px;
+}
+
+.result_a {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #719e19;
+    padding-top: 30px;
+}
+
+/*  .mainView {
+        width: 35%;
+    }*/
+.subcontent, .info {
+        width: 30%;
+    }
+.info {
+    margin:1%;
+    background-color: rgba(255,255,255,0.4);
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+    position: relative;
+    margin-left: 35%;
+    margin-top: 0%;
+    text-align: left;
+}
+
+.media {
+    max-height: 30px;
+    padding: 5px;
+    padding-left: 15px;
+
+}
+
+.resMedia {
+    max-height: 20px;
+    padding: 5px;
+    padding-right: 15px;
+
+}
+
+.mediaholder {
+    position: absolute;
+    right: 5%;
+   top: 12%;
+}
+
+.tab1, .tab2 {
+    visibility: hidden;
+}
+
+#note {
+    position: relative; margin-top: 35%;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .input_a, .input_b {
+        padding: 12px;
+        font-size: 20px;
+
+    }
+
+    .result_a, .result_b {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .arabicCalc, .englishCalc {
+        width: 90%;
+        transition: 0.3s;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+    }
+
+    .englishCalc {
+
+    }
+
+    .subcontent {
+        width: 100%;
+    }
+
+    .info {
+        position: fixed;
+        width: 95%;
+        bottom: 2%;
+        margin-left: -2.5%;
+    }
+
+    #note {
+        position: relative;
+        margin-top: 125%;
+    }
+
+    .tab1 button, .tab2 button{
+        visibility: visible;
+        background-color: #999;
+        border-radius: 30px;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: 2b2b2b;
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+    }
+    .tab1 button.active {
+        color: #719e19;
+        background-color: white;
+    }
+    .tab2 button.active {
+        color: #719e19;
+        background-color: white;
+    }
+    .arabic_tab{
+        position: absolute;
+        top: 5%;
+        right: 30%;
+    }
+    .english_tab{
+        position: absolute;
+        top: 5%;
+        left: 30%;
+    }
+}
