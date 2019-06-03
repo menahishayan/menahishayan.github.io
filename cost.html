@@ -115,7 +115,7 @@
 
 				<div id="demo" ng-if="data && mins && cost && (cost>(mins*0.4))" class="result_b">
 					Talktime: {{mins*0.4}} min<br>
-					Data/AED: {{(data/(cost-(mins*0.4))) | number : 2}} MB<br>
+					Data/AED: {{(data/(cost-(mins*0.4))) | number : 1}} MB<br>
 				</div>
 			</center>
 
@@ -132,14 +132,14 @@
 
 			<center>
 				<form>
-					<input type="text" ng-model="data" placeholder="الإنترنت" required ng-keypress="filterValue($event)" ng-focus="dataTouch = true" ng-blur="dataTouch = false" size="5" class="input_a"> &nbsp; &nbsp;
-					<input type="text" ng-model="mins" placeholder="الدقائق" required ng-keypress="filterValue($event)" ng-focus="minTouch = true" ng-blur="minTouch = false" size="5" class="input_a"> &nbsp; &nbsp;
 					<input type="text" ng-model="cost" placeholder="درهم" required ng-keypress="filterValue($event)" ng-focus="costTouch = true" ng-blur="costTouch = false" size="5" class="input_a"><br>
+					<input type="text" ng-model="mins" placeholder="الدقائق" required ng-keypress="filterValue($event)" ng-focus="minTouch = true" ng-blur="minTouch = false" size="5" class="input_a"> &nbsp; &nbsp;
+					<input type="text" ng-model="data" placeholder="الإنترنت" required ng-keypress="filterValue($event)" ng-focus="dataTouch = true" ng-blur="dataTouch = false" size="5" class="input_a"> &nbsp; &nbsp;
 				</form>
 
 				<div id="demo" ng-if="data && mins && cost && (cost>(mins*0.4))" class="result_b">
 					وقت التحدث {{mins*0.4}} الدقائق <br>
-					MB {{(data/(cost-(mins*0.4))) | number : 2}} البيانات الخلوية / درهم
+					MB {{(data/(cost-(mins*0.4))) | number : 1}} البيانات الخلوية / درهم
 					<br>
 				</div>
 			</center>
@@ -149,7 +149,7 @@
 	</div>
 	<center>
 		<p id="note">
-			Disclaimer: Not affiliated with Etisalat or Du or any other network provider.<br>
+			Disclaimer: Not affiliated with Etisalat, Du or other network provider.<br>
 			<a href="http://zaid03.ml/data_calculator/calculate.html" alt="Original">Original Concept Credit</a>
 		</p>
 	</center>

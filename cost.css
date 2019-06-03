@@ -65,6 +65,8 @@ a:hover {
 .input_a:hover {   border-bottom:5px solid #A7EB46; }
 .input_b:hover {    border-bottom:5px solid #A7EB46;    }
 .input_a:active , .input_b:active {    border-bottom:5px solid white;    }
+.input_a:focus , .input_b:focus {    border-bottom:5px solid #A7EB46;    }
+.input_a:blur , .input_b:blur {    border-bottom:5px solid #719e19;    }
 .englishCalc {
     position: absolute;
     left: 15%;
@@ -102,7 +104,7 @@ a:hover {
     }
 .info {
     margin:1%;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.6);
     -webkit-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
     box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
@@ -202,7 +204,7 @@ a:hover {
 
     .tab1 button, .tab2 button{
         visibility: visible;
-        background-color: #999;
+        background-color: #aaa;
         border-radius: 30px;
         padding: 10px;
         font-family: "Open Sans", "Arial";
