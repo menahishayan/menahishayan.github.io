@@ -5,7 +5,7 @@ body {
     background-color: #eee;
 }
 
-a {
+a:link, a:visited, a:active {
     color: #8b0000;
     font-weight: bold;
     text-decoration: none;
