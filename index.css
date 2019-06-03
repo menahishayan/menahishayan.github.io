@@ -1,0 +1,109 @@
+body {
+    font-family: "Open Sans", "Arial";
+    font-style: normal;
+    font-variant: normal;
+    background-color: #eee;
+}
+
+.subcontent, .info {
+        width: 30%;
+    }
+.info {
+    margin:1%;
+    background-color: rgba(255,255,255,0.6);
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.3);
+    position: relative;
+    margin-left: 35%;
+    margin-top: 0%;
+    text-align: left;
+}
+
+.media {
+    max-height: 30px;
+    padding: 5px;
+    padding-left: 15px;
+
+}
+
+.otherMedia {
+    max-height: 60px;
+    padding: 5px;
+    padding-right: 15px;
+
+}
+
+.mediaholder {
+    position: absolute;
+    right: 5%;
+   top: 12%;
+}
+
+
+#note {
+    position: relative; margin-top: 35%;
+    font-size: 11px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .subcontent {
+        width: 100%;
+    }
+
+    .info {
+        position: fixed;
+        width: 95%;
+        bottom: 2%;
+        margin-left: -2.5%;
+    }
+
+    #note {
+        position: relative;
+        margin-top: 125%;
+        font-size: 10px;
+    }
+
+    .tab1 button, .tab2 button{
+        visibility: visible;
+        background-color: #aaa;
+        border-radius: 30px;
+        padding: 10px;
+        font-family: "Open Sans", "Arial";
+        font-size: 22px;
+        font-weight: bold;
+        color: #2b2b2b;
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+    }
+    .tab1 button.active {
+        color: #719e19;
+        background-color: white;
+    }
+    .tab2 button.active {
+        color: #719e19;
+        background-color: white;
+    }
+}
