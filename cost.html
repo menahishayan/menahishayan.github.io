@@ -108,9 +108,9 @@
 
 			<center>
 				<form>
-					<input type="text" ng-model="data" placeholder="Data" required ng-keypress="filterValue($event)" ng-focus="dataTouch = true" ng-blur="dataTouch = false" size="5" class="input_b"> &nbsp; &nbsp;
-					<input type="text" ng-model="mins" placeholder="Min" required ng-keypress="filterValue($event)" ng-focus="minTouch = true" ng-blur="minTouch = false" size="5" class="input_b"> &nbsp; &nbsp;
-					<input type="text" ng-model="cost" placeholder="Cost" required ng-keypress="filterValue($event)" ng-focus="costTouch = true" ng-blur="costTouch = false" size="5" class="input_b"><br>
+					<input type="text" ng-model="data" placeholder="Data" required ng-keypress="filterValue($event)" ng-focus="dataTouch = true" ng-blur="dataTouch = false" size="5" type="number" class="input_b"> &nbsp; &nbsp;
+					<input type="text" ng-model="mins" placeholder="Min" required ng-keypress="filterValue($event)" ng-focus="minTouch = true" ng-blur="minTouch = false" size="5" type="number" class="input_b"> &nbsp; &nbsp;
+					<input type="text" ng-model="cost" placeholder="Cost" required ng-keypress="filterValue($event)" ng-focus="costTouch = true" ng-blur="costTouch = false" size="5" type="number" class="input_b"><br>
 				</form>
 
 				<div id="demo" ng-if="data && mins && cost && (cost>(mins*0.4))" class="result_b">
@@ -132,9 +132,9 @@
 
 			<center>
 				<form>
-					<input type="text" ng-model="cost" placeholder="درهم" required ng-keypress="filterValue($event)" ng-focus="costTouch = true" ng-blur="costTouch = false" size="5" class="input_a"> &nbsp; &nbsp;
-					<input type="text" ng-model="mins" placeholder="الدقائق" required ng-keypress="filterValue($event)" ng-focus="minTouch = true" ng-blur="minTouch = false" size="5" class="input_a"> &nbsp; &nbsp;
-					<input type="text" ng-model="data" placeholder="الإنترنت" required ng-keypress="filterValue($event)" ng-focus="dataTouch = true" ng-blur="dataTouch = false" size="5" class="input_a"><br>
+					<input type="text" ng-model="cost" placeholder="درهم" required ng-keypress="filterValue($event)" ng-focus="costTouch = true" ng-blur="costTouch = false" size="5" type="number" class="input_a"> &nbsp; &nbsp;
+					<input type="text" ng-model="mins" placeholder="الدقائق" required ng-keypress="filterValue($event)" ng-focus="minTouch = true" ng-blur="minTouch = false" size="5" type="number" class="input_a"> &nbsp; &nbsp;
+					<input type="text" ng-model="data" placeholder="الإنترنت" required ng-keypress="filterValue($event)" ng-focus="dataTouch = true" ng-blur="dataTouch = false" size="5" type="number" class="input_a"><br>
 				</form>
 
 				<div id="demo" ng-if="data && mins && cost && (cost>(mins*0.4))" class="result_b">
