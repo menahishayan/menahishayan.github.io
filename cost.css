@@ -67,6 +67,14 @@ a:hover {
 .input_a:active , .input_b:active {    border-bottom:5px solid white;    }
 .input_a:focus , .input_b:focus {    border-bottom:5px solid #A7EB46;    }
 .input_a:blur , .input_b:blur {    border-bottom:5px solid #719e19;    }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .englishCalc {
     position: absolute;
     left: 15%;
