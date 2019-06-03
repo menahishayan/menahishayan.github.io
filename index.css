@@ -5,6 +5,17 @@ body {
     background-color: #eee;
 }
 
+a {
+    color: darkred;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+  color: grey;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .subcontent, .info {
         width: 30%;
     }
@@ -28,7 +39,7 @@ body {
 }
 
 .otherMedia {
-    max-height: 60px;
+    max-height: 50px;
     padding: 5px;
     padding-right: 15px;
 
