@@ -6,7 +6,7 @@ body {
 }
 
 a {
-    color: darkred;
+    color: #8b0000;
     font-weight: bold;
     text-decoration: none;
 }
@@ -81,7 +81,7 @@ a:hover {
     }
 
     a {
-        color: darkred;
+        color: #8b0000;
         font-weight: bold;
         text-decoration: none;
     }
