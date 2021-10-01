@@ -3,12 +3,19 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "start",
+			"script": "predeploy",
 			"problemMatcher": [
 				"$eslint-compact"
 			],
-			"label": "npm: start",
-			"detail": "react-scripts start"
+			"label": "npm: predeploy",
+			"detail": "npm run build"
+		},
+		{
+			"type": "npm",
+			"script": "deploy",
+			"problemMatcher": [],
+			"label": "npm: deploy",
+			"detail": "gh-pages -d build"
 		}
 	]
 }
