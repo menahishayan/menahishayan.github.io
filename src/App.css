@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800;900&display=swap');
 
+body {
+  overflow-x: hidden;
+}
+
 section {
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
   text-align: center;
   overflow: hidden;
@@ -15,15 +19,11 @@ section {
 .slide-1-wave-container {
   position: absolute;
   left: -2px;
-  width: 102%;
+  width: 101%;
   top: -22vw;
+  filter: drop-shadow( 0px -9px 43px 0px rgba(0, 0, 0, 0.93));
 }
 
-.slide-1-wave {
-  box-shadow: 0px -9px 43px 0px rgba(0, 0, 0, 0.63);
-  -webkit-box-shadow: 0px -9px 43px 0px rgba(0, 0, 0, 0.63);
-  -moz-box-shadow: 0px -9px 43px 0px rgba(0, 0, 0, 0.63);
-}
 
 @keyframes fadeInAnimation {
   0% {
@@ -47,16 +47,62 @@ section {
   font-weight: 900;
   font-size: 82px;
   text-transform: uppercase;
-  vertical-align: middle;
-  line-height: 70vh;
+  /* line-height: 70vh; */
+  margin-top: 25%;
+  margin-bottom: 0;
   font-family: 'Raleway', sans-serif;
+  text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.253);
 
   animation: fadeInAnimation cubic-bezier(.29, .81, .48, 1.03) 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
+.subtitle {
+  color:white;
+  font-size: 30px;
+  display: inline-block;
+  margin-top: 0;
+  font-weight: bold;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.253);
+}
 
 .slide-2 {
   background-color: white;
+}
+
+.slide-2 {
+  background-color: white;
+}
+
+.slide-2-statement, .slide-3-statement {
+  font-size: 60px;
+  /* display: inline-block; */
+  margin-bottom: 12vh;
+  font-weight: 700;
+  font-style: italic ;
+}
+
+.tg-pink {
+  background: linear-gradient(to right, #bc4e9c, #f80759);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 70px;
+}
+
+.tg-yellow {
+  background: linear-gradient(to right, #fdc830, #f37335);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 70px;
+}
+
+.tg-purple {
+  background: linear-gradient(to right, #4568dc, #b06ab3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 70px;
 }
