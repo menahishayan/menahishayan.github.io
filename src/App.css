@@ -73,12 +73,18 @@ section {
 }
 
 
-.slide-2-statement, .slide-3-statement {
+.slide-2-statement {
   font-size: 60px;
   /* display: inline-block; */
   margin-bottom: 12vh;
   font-weight: 700;
   font-style: italic ;
+}
+
+ .slide-3-statement {
+  font-size: 60px;
+  /* display: inline-block; */
+  font-weight: 700;
 }
 
 .tg-pink {
