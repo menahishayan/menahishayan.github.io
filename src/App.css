@@ -21,7 +21,7 @@ section {
   left: -2px;
   width: 101%;
   top: -22vw;
-  filter: drop-shadow( 0px -9px 43px 0px rgba(0, 0, 0, 0.93));
+  filter: drop-shadow(0px -9px 43px 0px rgba(0, 0, 0, 0.93));
 }
 
 
@@ -59,7 +59,7 @@ section {
 }
 
 .subtitle {
-  color:white;
+  color: white;
   font-size: 30px;
   display: inline-block;
   margin-top: 0;
@@ -78,10 +78,10 @@ section {
   /* display: inline-block; */
   margin-bottom: 12vh;
   font-weight: 700;
-  font-style: italic ;
+  font-style: italic;
 }
 
- .slide-3-statement {
+.slide-3-statement {
   font-size: 60px;
   /* display: inline-block; */
   font-weight: 700;
@@ -116,4 +116,47 @@ section {
   margin-bottom: 12vh;
   margin-top: 12vh;
   font-weight: 600;
+}
+
+.para {
+  font-size: 22px;
+  color: grey;
+  word-wrap: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.tech-badge-container {
+  /* height: 40px;
+  width: 40px; */
+  padding: 15px;
+  /* border-radius: 50px;
+  border: 2px solid black; */
+  background-color: white;
+  margin: 10px;
+  position: relative;
+}
+
+.tech-badge {
+  height: 45px;
+  width: 45px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.459);
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 1;
+  left:0;
+  margin-top: -30px; 
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tech-badge-container:hover .tooltiptext {
+  visibility: visible;
 }

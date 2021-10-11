@@ -1,9 +1,22 @@
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, SplitChars, ScrollTrigger, Timeline } from 'react-gsap';
 import './App.css'
-import heart from './images/heart.png'
-import oven from './images/oven.svg'
 import { Fragment } from 'react';
+
+import heart from './images/heart.png'
+import oven from './images/oven2.png'
+import tensorflow from './images/tensorflow.svg'
+import raspberry from './images/raspberry.svg'
+import wslogo from './images/websocket.svg'
+import python from './images/python.svg'
+import linux from './images/tux.svg'
+
+const TechBadge = (props) => (
+    <div className="tech-badge-container">
+        <img src={props.src} className="tech-badge" alt={props.label} style={{transform:`scale(${props.zoom || 1})`}}/>
+        <span class="tooltiptext" style={{backgroundColor: props.color}}>{props.label}</span>
+    </div>
+)
 
 function App() {
     return (
@@ -63,7 +76,7 @@ function App() {
             </Scene>
             <Scene pin>
                 <section className="slide-3" >
-                    <ScrollTrigger start="-300vh center" end="70vh center" scrub={1}>
+                    <ScrollTrigger start="-300vh center" end="510vh center" scrub={1}>
                         <Timeline
                             wrapper={<div className="slide-3-pretext" />}
                             target={
@@ -72,33 +85,68 @@ function App() {
                                     <img src={heart} alt="love" style={{ height: 60, width: 60, verticalAlign: 'middle', marginLeft: 10, marginRight: 10 }} />
                                     <span>for</span>
                                 </Fragment>
-                            }>
+                            }
+                        >
                             <Tween to={{ transform: 'scale(1.3)', marginLeft: 20, marginRight: 20 }} target={1} />
                             <Tween to={{ transform: 'scale(1)', marginLeft: 10, marginRight: 10 }} target={1} />
                             <Tween to={{ transform: 'scale(1.3)', marginLeft: 20, marginRight: 20 }} target={1} />
                             <Tween to={{ transform: 'scale(1)', marginLeft: 10, marginRight: 10 }} target={1} />
+                            <Tween to={{ delay: 15, opacity: 0 }} />
                         </Timeline>
                     </ScrollTrigger>
-                    <ScrollTrigger start="120vh center" end="600vh center" scrub={0.3}>
+                    <ScrollTrigger start="240vh center" end="700vh center" scrub={0.3}>
                         <Timeline
                             target={
                                 <Fragment>
                                     <div className="slide-3-statement">Automating</div>
                                     <div className="slide-3-statement">Tinkering</div>
-                                    <div className="slide-3-statement" style={{ display: 'inline-block' }}>and simply&nbsp;</div>
-                                    <span className="slide-3-statement">making things better.</span>
-                                    <img src={oven} style={{height:'90vh'}}/>
+                                    <div className="slide-3-statement" style={{ display: 'inline-block', textAlign: 'right' }}>and simply&nbsp;</div>
+                                    <div className="slide-3-statement" style={{ display: 'inline-block', textAlign: 'left' }}>making things better.</div>
+
+                                    <img src={oven} style={{ width: '50vw', marginTop: '-32vh', marginRight: '35vw' }} alt="oven" />
+                                    <div>
+                                        <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: 50 }}>Like Inventing<br />The Automated Oven</div>
+                                        <div className="para" style={{ width: '30vw' }}><br /><br />
+                                            A one of a kind retrofitted feat of engineering, this oven uses IoT sensors and on-device machine learning to identify the
+                                            food you place and automatically set the time and temperature.<br /><br />
+                                            All you have to do is place the item in.
+                                            It's that simple.<br /><br />
+                                            Combined with an elegant UI, rich notifications, recipe comprehension, smart home integration, real-time energy analytics and an open API,
+                                            the Automated Oven is truly the biggest upgrade to the oven since it was invented.
+                                        </div><br /><br /><br />
+                                    </div>
+                                    <div style={{ flexDirection: 'row', display: 'flex' }}>
+                                        {
+                                            [
+                                                { src: raspberry, color: 'rgba(188,17,66,1)', label: 'IoT', zoom:1.3 },
+                                                { src: tensorflow, color: 'rgba(229,91,44,1)', label: 'TensorFlow' },
+                                                { src: wslogo, color: 'rgba(254,102,0,1)', label: 'Websockets' },
+                                                { src: python, color: 'rgba(254,209,65,1)', label: 'Python' },
+                                                { src: linux, color: 'rgba(0,0,0,1)', label: 'Linux' },
+                                            ].map((tb, i) => <TechBadge {...{...tb, key:i}} />)
+                                        }
+                                    </div>
                                 </Fragment>
-                            }>
+                            }
+                            labels={Array(10).map((_, a) => { return { label: a + '', position: a } })}
+                        >
 
                             <Tween from={{ transform: 'scale(8)', opacity: 0 }} target={0} ease="elastic.out(0.2,1.2)" />
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={0} />
                             <Tween from={{ transform: 'scale(8)', opacity: 0 }} target={1} ease="elastic.out(0.2,1.2)" />
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={1} />
                             <Tween from={{ x: '18vw', transform: 'scale(8)', opacity: 0 }} target={2} to={{ x: '18vw', transform: 'scale(1)', opacity: 1 }} ease="elastic.out(0.2,1.2)" />
-                            <Tween to={{ x: '0vw' }}  ease="elastic.out(0.2,1.2)" target={2}/>
-                            <Tween from={{ opacity: 0 }}  ease="elastic.out(0.2,1.2)" target={3}/>
-                            <Tween from={{ transform: 'scale(8)' }}   target={4}/>
+                            <Tween to={{ x: '0vw' }} ease="elastic.out(0.2,1.2)" target={2} />
+                            <Tween from={{ opacity: 0 }} ease="elastic.out(0.2,1.2)" target={3} />
+
+                            <Tween from={{ transform: 'scale(8)' }} target={4} position="7" />
+                            <Tween to={{ transform: 'scale(0.3)', marginRight: '15vw' }} target={2} position="7" />
+                            <Tween to={{ transform: 'scale(0.3)', x: '-35vw' }} target={3} position="7" />
+                            <Tween to={{ delay: 1, opacity: 0 }} target={2} position="8" />
+                            <Tween to={{ delay: 1, opacity: 0 }} target={3} position="8" />
+
+                            <Tween from={{ x: '70vw', y: '-65vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={5} />
+                            <Tween from={{ x: '65vw', y: '-60vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={6} />
                         </Timeline>
                     </ScrollTrigger>
                 </section>
