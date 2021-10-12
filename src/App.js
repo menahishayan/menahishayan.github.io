@@ -13,8 +13,8 @@ import linux from './images/tux.svg'
 
 const TechBadge = (props) => (
     <div className="tech-badge-container">
-        <img src={props.src} className="tech-badge" alt={props.label} style={{transform:`scale(${props.zoom || 1})`}}/>
-        <span class="tooltiptext" style={{backgroundColor: props.color}}>{props.label}</span>
+        <img src={props.src} className="tech-badge" alt={props.label} style={{ transform: `scale(${props.zoom || 1})` }} />
+        <span class="tooltiptext" style={{ backgroundColor: props.color }}>{props.label}</span>
     </div>
 )
 
@@ -89,12 +89,12 @@ function App() {
                         >
                             <Tween to={{ transform: 'scale(1.3)', marginLeft: 20, marginRight: 20 }} target={1} />
                             <Tween to={{ transform: 'scale(1)', marginLeft: 10, marginRight: 10 }} target={1} />
-                            <Tween to={{ transform: 'scale(1.3)', marginLeft: 20, marginRight: 20 }} target={1} />
+                            <Tween to={{ delay: 5, transform: 'scale(1.3)', marginLeft: 20, marginRight: 20 }} target={1} />
                             <Tween to={{ transform: 'scale(1)', marginLeft: 10, marginRight: 10 }} target={1} />
                             <Tween to={{ delay: 15, opacity: 0 }} />
                         </Timeline>
                     </ScrollTrigger>
-                    <ScrollTrigger start="240vh center" end="700vh center" scrub={0.3}>
+                    <ScrollTrigger start="240vh center" end="900vh center" scrub={0.3}>
                         <Timeline
                             target={
                                 <Fragment>
@@ -118,17 +118,20 @@ function App() {
                                     <div style={{ flexDirection: 'row', display: 'flex' }}>
                                         {
                                             [
-                                                { src: raspberry, color: 'rgba(188,17,66,1)', label: 'IoT', zoom:1.3 },
+                                                { src: raspberry, color: 'rgba(188,17,66,1)', label: 'IoT', zoom: 1.3 },
                                                 { src: tensorflow, color: 'rgba(229,91,44,1)', label: 'TensorFlow' },
                                                 { src: wslogo, color: 'rgba(254,102,0,1)', label: 'Websockets' },
                                                 { src: python, color: 'rgba(254,209,65,1)', label: 'Python' },
                                                 { src: linux, color: 'rgba(0,0,0,1)', label: 'Linux' },
-                                            ].map((tb, i) => <TechBadge {...{...tb, key:i}} />)
+                                            ].map((tb, i) => <TechBadge {...{ ...tb, key: i }} />)
                                         }
                                     </div>
+                                    <div style={{ background: 'linear-gradient(0deg, rgba(141,193,253,1) 0%, rgba(216,227,244,1) 100%)', height: '100vh', width: '100vw', zIndex: -10, position: 'absolute',top:0 }} />
+                                    {/* <div style={{ backgroundColor: 'skyblue', height: '600vh', width: '100vw',  zIndex:-10 }}/>
+                                    <img src="./screens/1.png" alt="screen1" style={{ height: '80vh', marginTop: '-20vh' }} /> */}
                                 </Fragment>
                             }
-                            labels={Array(10).map((_, a) => { return { label: a + '', position: a } })}
+                            labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
                         >
 
                             <Tween from={{ transform: 'scale(8)', opacity: 0 }} target={0} ease="elastic.out(0.2,1.2)" />
@@ -139,14 +142,42 @@ function App() {
                             <Tween to={{ x: '0vw' }} ease="elastic.out(0.2,1.2)" target={2} />
                             <Tween from={{ opacity: 0 }} ease="elastic.out(0.2,1.2)" target={3} />
 
-                            <Tween from={{ transform: 'scale(8)' }} target={4} position="7" />
-                            <Tween to={{ transform: 'scale(0.3)', marginRight: '15vw' }} target={2} position="7" />
-                            <Tween to={{ transform: 'scale(0.3)', x: '-35vw' }} target={3} position="7" />
-                            <Tween to={{ delay: 1, opacity: 0 }} target={2} position="8" />
-                            <Tween to={{ delay: 1, opacity: 0 }} target={3} position="8" />
+                            <Tween from={{ delay: 3, transform: 'scale(8)' }} target={4} position="7" />
+                            <Tween to={{ delay: 3, transform: 'scale(0.3)', marginRight: '15vw' }} target={2} position="7" />
+                            <Tween to={{ delay: 3, transform: 'scale(0.3)', x: '-35vw' }} target={3} position="7" />
+                            <Tween to={{ delay: 4, opacity: 0 }} target={2} position="8" />
+                            <Tween to={{ delay: 4, opacity: 0 }} target={3} position="8" />
 
                             <Tween from={{ x: '70vw', y: '-65vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={5} />
                             <Tween from={{ x: '65vw', y: '-60vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={6} />
+
+                            <Tween to={{ delay: 5, opacity: 0, y:'-30vh' }} target={4} position="11"/>
+                            <Tween to={{ delay: 5, opacity: 0, y:'-105vh' }} target={5} position="11"/>
+                            <Tween to={{ delay: 5, opacity: 0, y:'-100vh' }} target={6} position="11"/>
+                            <Tween from={{ opacity: 0 }} to={{ delay: 5, opacity: 1 }} target={7} position="11"/>
+
+                        </Timeline>
+                    </ScrollTrigger>
+                </section>
+            </Scene>
+            <Scene pin>
+                <section className="slide-4" style={{overflowY:'visible'}}>
+                    <ScrollTrigger start="540vh center" end="800vh center" scrub={0.3} markers>
+                        <Timeline
+                            target={
+                                <Fragment>
+                                    <img src="./screens/1.png" alt="screen1" className="oven-screenshot" />
+                                    <img src="./screens/2.png" alt="screen1" className="oven-screenshot" />
+                                    <img src="./screens/3.png" alt="screen1" className="oven-screenshot" />
+                                    <img src="./screens/4.png" alt="screen1" className="oven-screenshot" />
+                                    <img src="./screens/5.png" alt="screen1" className="oven-screenshot" />
+                                </Fragment>
+                            }
+                            labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
+                            >
+                                <Tween from={{x:'88vw', y:'82vh', opacity:0}} target={2} position="1"/>
+                                <Tween from={{x:'-28vw', y:'-82vh', opacity:0}} target={1}position="1"/>
+                                <Tween from={{x:'-50vw', y:'-50vh', opacity:0}} target={0}position="1"/>
                         </Timeline>
                     </ScrollTrigger>
                 </section>
