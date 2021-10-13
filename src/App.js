@@ -7,6 +7,7 @@ import heart from './images/heart.png'
 import oven from './images/oven2.png'
 import tensorflow from './images/tensorflow.svg'
 import raspberry from './images/raspberry.svg'
+import reactlogo from './images/react.svg'
 import wslogo from './images/websocket.svg'
 import python from './images/python.svg'
 import linux from './images/tux.svg'
@@ -160,7 +161,7 @@ function App() {
                 </section>
             </Scene>
             <Scene pin>
-                <section className="slide-4" style={{position:'relative',top:'-120vh'}}>
+                <section className="slide-4" style={{ position: 'relative', top: '-120vh' }}>
                     <ScrollTrigger start="0vh center" end="300vh center" scrub={0.7}>
                         <Timeline
                             wrapper={<div style={{ position: 'relative', top: '-50vh', left: '-35vw' }} />}
@@ -172,28 +173,57 @@ function App() {
                                     <img src="./screens/1.png" alt="screen1" className="oven-screenshot" style={{ top: '-60vh', left: '56vw' }} /><br />
                                     <img src="./screens/2.png" alt="screen1" className="oven-screenshot" style={{ top: '-105vh', left: '55vw' }} /><br />
                                     <img src="./screens/4.png" alt="screen1" className="oven-screenshot" style={{ top: '-174vh', left: '98vw' }} /><br />
-                                    <img src="./screens/7.png" alt="screen1" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} /><br/>
-                                    <div className="slide-4-statement">And a beautifully designed<br/>revolutionary mobile app.</div>
+                                    <img src="./screens/7.png" alt="screen1" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} /><br />
+                                    <div className="slide-4-statement">And a beautifully designed<br />revolutionary mobile app.</div>
+                                    <div style={{ backgroundColor: 'white', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '50vh', left: '35vw' }} />
+                                    <div>
+                                        <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: 50 }}>Clear, Consistent<br />User Interface</div>
+                                        <div className="para" style={{ width: '30vw' }}><br /><br />
+                                            A one of a kind retrofitted feat of engineering, this oven uses IoT sensors and on-device machine learning to identify the
+                                            food you place and automatically set the time and temperature.
+                                        </div><br /><br /><br />
+                                    </div>
+                                    <div style={{ flexDirection: 'row', display: 'flex' }}>
+                                        {
+                                            [
+                                                { src: reactlogo, color: 'rgba(188,17,66,1)', label: 'React Native', zoom: 1.7 },
+                                                { src: wslogo, color: 'rgba(254,102,0,1)', label: 'Websockets' },
+                                            ].map((tb, i) => <TechBadge {...{ ...tb, key: i }} />)
+                                        }
+                                    </div>
                                 </Fragment>
                             }
                             labels={Array(5).map((_, a) => { return { label: a + '', position: a } })}
                         >
-                            {/* 0 1 3 4 6 8 10 */}
-                            <Tween from={{  x: '-105vw', y: '-50vh', opacity:0 }} target={4} position="0" ease="back.out(0.8)" />
-                            <Tween from={{  x: '-105vw', y: '-155vh', opacity:0 }} target={6} position="0" ease="back.out(0.8)"/>
-                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={8} position="0" ease="back.out(0.8)" />
-                            <Tween from={{  x: '145vw', y: '150vh', opacity:0 }} target={0} position="0" ease="back.out(0.8)"/>
-                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={1} position="0" ease="back.out(0.8)" />
-                            <Tween from={{  x: '140vw', y: '152vh' , opacity:0}} target={3} position="0" ease="back.out(0.8)" />
-                            <Tween from={{  x: '-135vw', y: '-105vh' , opacity:0}} target={10} position="0" ease="back.out(0.8)" />
-                            <Tween from={{ delay:0.2,transform:'scale(9)', opacity:0}} target={12} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '-105vw', y: '-50vh', opacity: 0 }} target={4} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '-105vw', y: '-155vh', opacity: 0 }} target={6} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '135vw', y: '155vh', opacity: 0 }} target={8} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '145vw', y: '150vh', opacity: 0 }} target={0} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '135vw', y: '155vh', opacity: 0 }} target={1} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '140vw', y: '152vh', opacity: 0 }} target={3} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ x: '-135vw', y: '-105vh', opacity: 0 }} target={10} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ delay: 0.2, transform: 'scale(9)', opacity: 0 }} target={12} position="0" ease="back.out(0.8)" />
+
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={12} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={6} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={0} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={4} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={8} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={3} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={10} position="2" />
+                            <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} target={13} position="3" />
+                            <Tween to={{ delay: 0.5, transform: 'rotate(0deg)', x: '-10vh', y: '25vw' }} target={1} position="2" />
+
+                            <Tween from={{ x: '95vw', y: '-415vh', opacity: 0 }} to={{ x: '90vw', y: '-415vh', opacity: 1 }} target={14} />
+                            <Tween from={{ x: '90vw', y: '-410vh', opacity: 0 }} to={{ x: '90vw', y: '-415vh', opacity: 1 }} target={15} />
+
                         </Timeline>
                     </ScrollTrigger>
                 </section>
             </Scene>
 
             {
-                ['#ddd', 'white', '#ddd'].map((c, i) => (
+                ['white', '#f3f3f3'].map((c, i) => (
                     <Scene key={i} pin>
                         <section style={{ backgroundColor: c }}>
                             <h1>Slide {i + 1}</h1>
