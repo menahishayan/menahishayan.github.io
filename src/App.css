@@ -162,8 +162,9 @@ section {
 }
 
 .oven-screenshot {
-  height: 80vh;
+  height: 90vh;
   transform: rotate(-30deg);
   margin-top: 10vh;
-  margin:25px;
+  margin: 25px;
+  position: relative;
 }

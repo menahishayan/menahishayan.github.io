@@ -94,7 +94,7 @@ function App() {
                             <Tween to={{ delay: 15, opacity: 0 }} />
                         </Timeline>
                     </ScrollTrigger>
-                    <ScrollTrigger start="240vh center" end="900vh center" scrub={0.3}>
+                    <ScrollTrigger start="240vh center" end="900vh center" scrub={0.3} markers>
                         <Timeline
                             target={
                                 <Fragment>
@@ -126,7 +126,7 @@ function App() {
                                             ].map((tb, i) => <TechBadge {...{ ...tb, key: i }} />)
                                         }
                                     </div>
-                                    <div style={{ background: 'linear-gradient(0deg, rgba(141,193,253,1) 0%, rgba(216,227,244,1) 100%)', height: '100vh', width: '100vw', zIndex: -10, position: 'absolute',top:0 }} />
+                                    <div style={{ background: 'linear-gradient(0deg, rgba(141,193,253,1) 0%, rgba(216,227,244,1) 100%)', height: '100vh', width: '100vw', zIndex: -10, position: 'absolute', top: 0 }} />
                                     {/* <div style={{ backgroundColor: 'skyblue', height: '600vh', width: '100vw',  zIndex:-10 }}/>
                                     <img src="./screens/1.png" alt="screen1" style={{ height: '80vh', marginTop: '-20vh' }} /> */}
                                 </Fragment>
@@ -151,33 +151,40 @@ function App() {
                             <Tween from={{ x: '70vw', y: '-65vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={5} />
                             <Tween from={{ x: '65vw', y: '-60vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={6} />
 
-                            <Tween to={{ delay: 5, opacity: 0, y:'-30vh' }} target={4} position="11"/>
-                            <Tween to={{ delay: 5, opacity: 0, y:'-105vh' }} target={5} position="11"/>
-                            <Tween to={{ delay: 5, opacity: 0, y:'-100vh' }} target={6} position="11"/>
-                            <Tween from={{ opacity: 0 }} to={{ delay: 5, opacity: 1 }} target={7} position="11"/>
-
+                            <Tween to={{ delay: 5, opacity: 0, y: '-30vh' }} target={4} position="11" />
+                            <Tween to={{ delay: 5, opacity: 0, y: '-105vh' }} target={5} position="11" />
+                            <Tween to={{ delay: 5, opacity: 0, y: '-100vh' }} target={6} position="11" />
+                            <Tween from={{ opacity: 0 }} to={{ delay: 5, opacity: 1 }} target={7} position="11" />
                         </Timeline>
                     </ScrollTrigger>
                 </section>
             </Scene>
             <Scene pin>
-                <section className="slide-4" style={{overflowY:'visible'}}>
-                    <ScrollTrigger start="540vh center" end="800vh center" scrub={0.3} markers>
+                <section className="slide-4" style={{position:'relative',top:'-120vh'}}>
+                    <ScrollTrigger start="0vh center" end="300vh center" scrub={0.5} markers>
                         <Timeline
+                            wrapper={<div style={{ position: 'relative', top: '-50vh', left: '-35vw' }} />}
                             target={
                                 <Fragment>
-                                    <img src="./screens/1.png" alt="screen1" className="oven-screenshot" />
-                                    <img src="./screens/2.png" alt="screen1" className="oven-screenshot" />
-                                    <img src="./screens/3.png" alt="screen1" className="oven-screenshot" />
-                                    <img src="./screens/4.png" alt="screen1" className="oven-screenshot" />
-                                    <img src="./screens/5.png" alt="screen1" className="oven-screenshot" />
+                                    <img src="./screens/1.png" alt="screen1" className="oven-screenshot" style={{ left: '-5vw' }} />
+                                    <img src="./screens/3.png" alt="screen1" className="oven-screenshot" style={{ top: '10vh' }} /><br />
+                                    <img src="./screens/4.png" alt="screen1" className="oven-screenshot" style={{ top: '-15vh', left: '22vw' }} />
+                                    <img src="./screens/1.png" alt="screen1" className="oven-screenshot" style={{ top: '-60vh', left: '56vw' }} /><br />
+                                    <img src="./screens/2.png" alt="screen1" className="oven-screenshot" style={{ top: '-105vh', left: '55vw' }} /><br />
+                                    <img src="./screens/4.png" alt="screen1" className="oven-screenshot" style={{ top: '-174vh', left: '98vw' }} /><br />
+                                    <img src="./screens/7.png" alt="screen1" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} />
                                 </Fragment>
                             }
-                            labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
-                            >
-                                <Tween from={{x:'88vw', y:'82vh', opacity:0}} target={2} position="1"/>
-                                <Tween from={{x:'-28vw', y:'-82vh', opacity:0}} target={1}position="1"/>
-                                <Tween from={{x:'-50vw', y:'-50vh', opacity:0}} target={0}position="1"/>
+                            labels={Array(5).map((_, a) => { return { label: a + '', position: a } })}
+                        >
+                            {/* 0 1 3 4 6 8 10 */}
+                            <Tween from={{  x: '-105vw', y: '-50vh', opacity:0 }} target={4} position="0" ease="back.out(1.2)" />
+                            <Tween from={{  x: '-105vw', y: '-155vh', opacity:0 }} target={6} position="0" ease="back.out(1.2)" />
+                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={8} position="0" ease="back.out(1.2)" />
+                            <Tween from={{  x: '145vw', y: '150vh', opacity:0 }} target={0} position="0" ease="back.out(1.2)"/>
+                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={1} position="0" ease="back.out(1.2)" />
+                            <Tween from={{  x: '140vw', y: '152vh' , opacity:0}} target={3} position="0" ease="back.out(1.2)" />
+                            <Tween from={{  x: '-135vw', y: '-105vh' , opacity:0}} target={10} position="0" ease="back.out(1.2)" />
                         </Timeline>
                     </ScrollTrigger>
                 </section>
