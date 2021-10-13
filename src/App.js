@@ -94,7 +94,7 @@ function App() {
                             <Tween to={{ delay: 15, opacity: 0 }} />
                         </Timeline>
                     </ScrollTrigger>
-                    <ScrollTrigger start="240vh center" end="900vh center" scrub={0.3} markers>
+                    <ScrollTrigger start="240vh center" end="900vh center" scrub={0.3}>
                         <Timeline
                             target={
                                 <Fragment>
@@ -161,7 +161,7 @@ function App() {
             </Scene>
             <Scene pin>
                 <section className="slide-4" style={{position:'relative',top:'-120vh'}}>
-                    <ScrollTrigger start="0vh center" end="300vh center" scrub={0.5} markers>
+                    <ScrollTrigger start="0vh center" end="300vh center" scrub={0.7}>
                         <Timeline
                             wrapper={<div style={{ position: 'relative', top: '-50vh', left: '-35vw' }} />}
                             target={
@@ -172,19 +172,21 @@ function App() {
                                     <img src="./screens/1.png" alt="screen1" className="oven-screenshot" style={{ top: '-60vh', left: '56vw' }} /><br />
                                     <img src="./screens/2.png" alt="screen1" className="oven-screenshot" style={{ top: '-105vh', left: '55vw' }} /><br />
                                     <img src="./screens/4.png" alt="screen1" className="oven-screenshot" style={{ top: '-174vh', left: '98vw' }} /><br />
-                                    <img src="./screens/7.png" alt="screen1" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} />
+                                    <img src="./screens/7.png" alt="screen1" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} /><br/>
+                                    <div className="slide-4-statement">And a beautifully designed<br/>revolutionary mobile app.</div>
                                 </Fragment>
                             }
                             labels={Array(5).map((_, a) => { return { label: a + '', position: a } })}
                         >
                             {/* 0 1 3 4 6 8 10 */}
-                            <Tween from={{  x: '-105vw', y: '-50vh', opacity:0 }} target={4} position="0" ease="back.out(1.2)" />
-                            <Tween from={{  x: '-105vw', y: '-155vh', opacity:0 }} target={6} position="0" ease="back.out(1.2)" />
-                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={8} position="0" ease="back.out(1.2)" />
-                            <Tween from={{  x: '145vw', y: '150vh', opacity:0 }} target={0} position="0" ease="back.out(1.2)"/>
-                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={1} position="0" ease="back.out(1.2)" />
-                            <Tween from={{  x: '140vw', y: '152vh' , opacity:0}} target={3} position="0" ease="back.out(1.2)" />
-                            <Tween from={{  x: '-135vw', y: '-105vh' , opacity:0}} target={10} position="0" ease="back.out(1.2)" />
+                            <Tween from={{  x: '-105vw', y: '-50vh', opacity:0 }} target={4} position="0" ease="back.out(0.8)" />
+                            <Tween from={{  x: '-105vw', y: '-155vh', opacity:0 }} target={6} position="0" ease="back.out(0.8)"/>
+                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={8} position="0" ease="back.out(0.8)" />
+                            <Tween from={{  x: '145vw', y: '150vh', opacity:0 }} target={0} position="0" ease="back.out(0.8)"/>
+                            <Tween from={{ x: '135vw', y: '155vh' , opacity:0}} target={1} position="0" ease="back.out(0.8)" />
+                            <Tween from={{  x: '140vw', y: '152vh' , opacity:0}} target={3} position="0" ease="back.out(0.8)" />
+                            <Tween from={{  x: '-135vw', y: '-105vh' , opacity:0}} target={10} position="0" ease="back.out(0.8)" />
+                            <Tween from={{ delay:0.2,transform:'scale(9)', opacity:0}} target={12} position="0" ease="back.out(0.8)" />
                         </Timeline>
                     </ScrollTrigger>
                 </section>
