@@ -178,9 +178,9 @@ function App() {
                                     <div className="slide-4-statement">And a beautifully designed<br />revolutionary mobile app.</div>
                                     <div style={{ backgroundColor: 'white', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '50vh', left: '35vw' }} />
                                     <div>
-                                        <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: 50 }}>Simple, yet<br/>Elegantly Designed.</div>
+                                        <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: 50 }}>Vibrant, yet<br />Elegant Design.</div>
                                         <div className="para" style={{ width: '30vw' }}><br /><br />
-                                        The meticulously crafted interface does away with all of the boring knobs and switches and introduces vibrant, familiar UI elements such as the pause and play button, sliders, carousels, rich icons, vibrant colors and exciting animations.<br/><br/>All while maintaining the elegance of a standardized interface and consistent design principles.
+                                            The meticulously crafted interface does away with all of the boring knobs and switches and introduces vibrant, familiar UI elements such as the pause and play button, sliders, carousels, rich icons, vibrant colors and exciting animations.<br /><br />All while maintaining the elegance of a standardized interface and consistent design principles.
                                         </div><br /><br /><br />
                                     </div>
                                     <div style={{ flexDirection: 'row', display: 'flex' }}>
@@ -206,10 +206,10 @@ function App() {
 
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={12} position="2" />
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={6} position="2" />
-                            <Tween to={{ transform: 'scale(0)', opacity: 0}} target={0} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={0} position="2" />
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={4} position="2" />
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={8} position="2" />
-                            <Tween to={{ transform: 'scale(0)', opacity: 0}} target={3} position="2" />
+                            <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={3} position="2" />
                             <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={10} position="2" />
                             <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} target={13} position="3" />
                             <Tween to={{ delay: 0.5, transform: 'rotate(0deg)', x: '-10vh', y: '25vw' }} target={1} position="2" />
@@ -217,6 +217,9 @@ function App() {
                             <Tween from={{ x: '95vw', y: '-425vh', opacity: 0 }} to={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} />
                             <Tween from={{ x: '90vw', y: '-420vh', opacity: 0 }} to={{ x: '90vw', y: '-425vh', opacity: 1 }} target={15} />
 
+                            <Tween to={{ delay: 2, x: '95vw', y: '-425vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} position="6" />
+                            <Tween to={{ delay: 2, x: '90vw', y: '-420vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={15} position="6" />
+                            <Tween to={{ delay: 2, x: '-15vh', opacity: 0 }} target={1} position="6" />
                         </Timeline>
                     </ScrollTrigger>
                 </section>
@@ -226,7 +229,7 @@ function App() {
                 ['white', '#f3f3f3'].map((c, i) => (
                     <Scene key={i} pin>
                         <section style={{ backgroundColor: c }}>
-                            <h1>Slide {i + 1}</h1>
+                            <h1>Slide {i + 6}</h1>
                         </section>
                     </Scene>
                 ))
