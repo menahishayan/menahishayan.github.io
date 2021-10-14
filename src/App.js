@@ -191,9 +191,16 @@ function App() {
                                             ].map((tb, i) => <TechBadge {...{ ...tb, key: i }} />)
                                         }
                                     </div>
+                                    <div>
+                                        <div className="slide-3-statement" style={{ textAlign: 'center', fontSize: 50, width: '30vw' }}>Eat, Repeat.</div>
+                                        <div className="para" style={{ textAlign: 'center', width: '30vw' }}><br /><br />
+                                            User-specific and global history tracking, filtering, tweaking, analytics and recommendations right from the same simple colorful interface.
+                                        </div><br /><br /><br />
+                                    </div>
+                                    <img src="./screens/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)' }} />
                                 </Fragment>
                             }
-                            labels={Array(5).map((_, a) => { return { label: a + '', position: a } })}
+                            labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
                         >
                             <Tween from={{ x: '-105vw', y: '-50vh', opacity: 0 }} target={4} position="0" ease="back.out(0.8)" />
                             <Tween from={{ x: '-105vw', y: '-155vh', opacity: 0 }} target={6} position="0" ease="back.out(0.8)" />
@@ -217,9 +224,11 @@ function App() {
                             <Tween from={{ x: '95vw', y: '-425vh', opacity: 0 }} to={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} />
                             <Tween from={{ x: '90vw', y: '-420vh', opacity: 0 }} to={{ x: '90vw', y: '-425vh', opacity: 1 }} target={15} />
 
-                            <Tween to={{ delay: 2, x: '95vw', y: '-425vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} position="6" />
+                            <Tween to={{ delay: 2, x: '85vw', y: '-425vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} position="6" />
                             <Tween to={{ delay: 2, x: '90vw', y: '-420vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={15} position="6" />
                             <Tween to={{ delay: 2, x: '-15vh', opacity: 0 }} target={1} position="6" />
+                            <Tween from={{ x: '50vw', y: '-475vh', opacity: 0 }} to={{ delay: 1, x: '45vw', y: '-475vh', opacity: 1 }} target={16} position="8" />
+                            <Tween from={{ x: '65vw', y: '-500vh', opacity: 0 }} to={{ delay: 1, x: '60vw', y: '-500vh', opacity: 1 }} target={17} position="8" />
                         </Timeline>
                     </ScrollTrigger>
                 </section>
