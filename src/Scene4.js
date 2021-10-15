@@ -22,16 +22,14 @@ const Scene4 = () => (
                             <img src="./screens/7.png" alt="settings screen" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} />
                             <br />
                             <div className="slide-4-statement">And a beautifully designed<br />revolutionary mobile app.</div>
-                            <div style={{ backgroundColor: 'white', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '50vh', left: '35vw' }} />
-                            <div>
+                            <div style={{ backgroundColor: 'white', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '50vh', left: '35vw' }} ></div>
+                            <div style={{ position: 'relative', left: '150vw' }}>
                                 <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: 50 }}>Vibrant, yet<br />Elegant Design.</div>
                                 <div className="para" style={{ width: '30vw' }}><br /><br />
                                     The meticulously crafted interface does away with all of the boring knobs and switches and introduces vibrant, familiar UI elements such as the pause and play button, sliders, carousels, rich icons, vibrant colors and exciting animations.<br /><br />All while maintaining the elegance of a standardized interface and consistent design principles.
                                 </div><br /><br /><br />
                             </div>
-                            <div style={{ flexDirection: 'row', display: 'flex' }}>
-                                {techBadges(['React Native', 'Websockets'])}
-                            </div>
+                            <div style={{ flexDirection: 'row', display: 'flex', position: 'relative', left: '150vw' }}>{techBadges(['React Native', 'Websockets'])}</div>
                             <div>
                                 <div className="slide-3-statement" style={{ textAlign: 'center', fontSize: 50, width: '30vw' }}>Eat, Repeat.</div>
                                 <div className="para" style={{ textAlign: 'center', width: '30vw' }}><br /><br />
@@ -77,11 +75,11 @@ const Scene4 = () => (
                     <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} target={13} position="3" />
                     <Tween to={{ delay: 0.5, transform: 'rotate(0deg)', x: '-10vh', y: '25vw' }} target={1} position="2" />
 
-                    <Tween from={{ x: '95vw', y: '-425vh', opacity: 0 }} to={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} />
-                    <Tween from={{ x: '90vw', y: '-420vh', opacity: 0 }} to={{ x: '90vw', y: '-425vh', opacity: 1 }} target={15} />
+                    <Tween from={{ x: '-45vw', y: '-425vh', opacity: 0 }} to={{ delay: 0.5,x: '-50vw', y: '-425vh', opacity: 1 }} target={14}  position="2"/>
+                    <Tween from={{ x: '-50vw', y: '-420vh', opacity: 0 }} to={{ delay: 0.5,x: '-50vw', y: '-425vh', opacity: 1 }} target={15}  position="2"/>
 
-                    <Tween to={{ delay: 2, x: '85vw', y: '-425vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={14} position="6" />
-                    <Tween to={{ delay: 2, x: '90vw', y: '-420vh', opacity: 0 }} from={{ x: '90vw', y: '-425vh', opacity: 1 }} target={15} position="6" />
+                    <Tween to={{ delay: 2, x: '-55vw', y: '-425vh', opacity: 0 }} from={{ x: '-50vw', y: '-425vh', opacity: 1 }} target={14} position="6" />
+                    <Tween to={{ delay: 2, x: '-50vw', y: '-420vh', opacity: 0 }} from={{ x: '-50vw', y: '-425vh', opacity: 1 }} target={15} position="6" />
                     <Tween to={{ delay: 2, x: '-15vh', opacity: 0 }} target={1} position="6" />
                     <Tween from={{ x: '50vw', y: '-475vh', opacity: 0 }} to={{ delay: 1, x: '45vw', y: '-475vh', opacity: 1 }} target={16} position="8" />
                     <Tween from={{ x: '65vw', y: '-500vh', opacity: 0 }} to={{ delay: 1, x: '60vw', y: '-500vh', opacity: 1 }} target={17} position="8" />

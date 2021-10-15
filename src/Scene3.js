@@ -53,7 +53,7 @@ const Scene3 = () => (
                             <div style={{ flexDirection: 'row', display: 'flex' }}>
                                 {techBadges(['IoT', 'TensorFlow', 'Websockets', 'Python', 'Linux'])}
                             </div>
-                            <div style={{ background: 'linear-gradient(0deg, rgba(141,193,253,1) 0%, rgba(216,227,244,1) 100%)', height: '100vh', width: '100vw', zIndex: -10, position: 'absolute', top: 0 }} />
+                            <div style={{ background: 'linear-gradient(0deg, rgba(141,193,253,1) 0%, rgba(216,227,244,1) 100%)', height: '100vh', width: '100vw', zIndex: -10, position: 'fixed', top: 0 }} />
                         </Fragment>
                     }
                     labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}

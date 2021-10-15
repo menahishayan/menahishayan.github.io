@@ -19,7 +19,7 @@ const _techBadges = {
 export const TechBadge = (props) => (
     <div className="tech-badge-container">
         <img src={props.src} className="tech-badge" alt={props.label} style={{ transform: `scale(${props.zoom || 1})` }} />
-        <span class="tooltiptext" style={{ backgroundColor: props.color }}>{props.label}</span>
+        <span className="tooltiptext" style={{ backgroundColor: props.color }}>{props.label}</span>
     </div>
 )
 
