@@ -11,7 +11,7 @@ const Scene5 = () => (
                     wrapper={<div style={{ position: 'relative' }} />}
                     target={
                         <Fragment>
-                            <div style={{ background: 'radial-gradient(farthest-corner at 20vw 35vh, rgba(226,195,125,1) 0%, rgba(71,68,58,0) 60%)', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '0', left: '0' }} ></div>
+                            <div style={{ background: 'radial-gradient(farthest-corner at 18vw 35vh, rgba(239,194,132,1) 0%, rgba(71,68,58,0) 60%)', height: '100vh', width: '100vh', zIndex: -9, position: 'absolute', top: '0', left: '0' }} ></div>
                             <img src="./images/ledglow1.png" alt="lightbulb" className="lightbulb" />
                             <img src="./images/ledglow2.png" alt="lightbulb" className="lightbulb" />
                         </Fragment>
@@ -19,8 +19,8 @@ const Scene5 = () => (
                     labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
                     >
                     <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} target={0} position="1"/>
-                    <Tween to={{ opacity: 0 }} target={1} position="1" />
-                    <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} target={2} position="1"/>
+                    <Tween to={{ delay:0.5,opacity: 0 }} target={1} position="1" />
+                    <Tween from={{ opacity: 0 }} to={{ delay:0.5,opacity: 1 }} target={2} position="1"/>
                 </Timeline>
             </ScrollTrigger>
         </section>
