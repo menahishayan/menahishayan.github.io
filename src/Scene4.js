@@ -36,8 +36,8 @@ const Scene4 = () => (
                                     User-specific and global history tracking, filtering, tweaking, analytics and recommendations right from the same simple colorful interface.
                                 </div><br /><br /><br />
                             </div>
-                            <img src="./screens/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)' }} />
-                            <div>
+                            <img src="./screens/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)', opacity:0 }} />
+                            <div style={{ opacity:0}}>
                                 <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: '5vh', width: '30vw' }}>With great power, comes little responsibility.</div>
                                 <div className="para" style={{ textAlign: 'left', width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     Get real-time energy analytics and smart energy monitoring. The oven automatically helps you cut down on costs, so you don’t have to.
@@ -81,23 +81,23 @@ const Scene4 = () => (
                     <Tween to={{ delay: 2, x: '-60vw', y: '-435vh', opacity: 0 }} from={{ x: '-55vw', y: '-435vh', opacity: 1 }} target={14} position="6" />
                     <Tween to={{ delay: 2, x: '-55vw', y: '-430vh', opacity: 0 }} from={{ x: '-55vw', y: '-435vh', opacity: 1 }} target={15} position="6" />
                     <Tween to={{ delay: 2, x: '-15vh', opacity: 0 }} target={1} position="6" />
-                    <Tween from={{ x: '50vw', y: '-485vh', opacity: 0 }} to={{ delay: 1, x: '45vw', y: '-485vh', opacity: 1 }} target={16} position="8" />
+                    {/* <Tween from={{ x: '50vw', y: '-485vh', opacity: 0 }} to={{ delay: 1, x: '45vw', y: '-485vh', opacity: 1 }} target={16} position="8" />
                     <Tween from={{ x: '65vw', y: '-510vh', opacity: 0 }} to={{ delay: 1, x: '60vw', y: '-510vh', opacity: 1 }} target={17} position="8" />
 
                     <Tween to={{ delay: 2, x: '40vw', y: '-485vh', opacity: 0 }} target={16} position="10" />
-                    <Tween to={{ delay: 2, x: '55vw', y: '-510vh', opacity: 0 }} target={17} position="10" />
-                    <Tween from={{ x: '95vw', y: '-610vh', opacity: 0 }} to={{ delay: 1, x: '90vw', y: '-610vh', opacity: 1 }} target={18} position="12" />
-                    <Tween from={{ x: '20vw', y: '-675vh', opacity: 0 }} to={{ delay: 1, x: '15vw', y: '-675vh', opacity: 1 }} target={19} position="12" />
+                    <Tween to={{ delay: 2, x: '55vw', y: '-510vh', opacity: 0 }} target={17} position="10" /> */}
+                    <Tween from={{ x: '95vw', y: '-610vh', opacity: 0 }} to={{ delay: 1, x: '90vw', y: '-610vh', opacity: 1 }} target={18} position="8" />
+                    <Tween from={{ x: '20vw', y: '-675vh', opacity: 0 }} to={{ delay: 1, x: '15vw', y: '-675vh', opacity: 1 }} target={19} position="8" />
 
-                    <Tween to={{ delay: 2, x: '85vw', y: '-610vh', opacity: 0 }} target={18} position="14" />
-                    <Tween to={{ delay: 2, x: '10vw', y: '-675vh', opacity: 0 }} target={19} position="14" />
-                    <Tween from={{ x: '70vw', y: '-750vh', opacity: 0 }} to={{ delay: 1, x: '70vw', y: '-750vh', opacity: 1 }} target={20} position="16" />
-                    <Tween from={{ x: '17vw', y: '-780vh', opacity: 0 }} to={{ delay: 1, x: '17vw', y: '-790vh', opacity: 1 }} target={21} position="16" />
-                    <Tween from={{ x: '53vw', y: '-840vh', opacity: 0 }} to={{ delay: 1, x: '53vw', y: '-830vh', opacity: 1 }} target={22} position="16" />
+                    <Tween to={{ delay: 2, x: '85vw', y: '-610vh', opacity: 0 }} target={18} position="10" />
+                    <Tween to={{ delay: 2, x: '10vw', y: '-675vh', opacity: 0 }} target={19} position="10" />
+                    <Tween from={{ x: '70vw', y: '-750vh', opacity: 0 }} to={{ delay: 1, x: '70vw', y: '-750vh', opacity: 1 }} target={20} position="12" />
+                    <Tween from={{ x: '17vw', y: '-780vh', opacity: 0 }} to={{ delay: 1, x: '17vw', y: '-790vh', opacity: 1 }} target={21} position="12" />
+                    <Tween from={{ x: '53vw', y: '-840vh', opacity: 0 }} to={{ delay: 1, x: '53vw', y: '-830vh', opacity: 1 }} target={22} position="12" />
 
-                    <Tween to={{ delay: 5, y: '-750vh', opacity: 0 }} target={20} position="18" />
-                    <Tween to={{ delay: 7, x: '17vw', y: '-810vh', opacity: 0 }} target={21} position="18" />
-                    <Tween to={{ delay: 7, x: '53vw', y: '-810vh', opacity: 0 }} target={22} position="18" />
+                    <Tween to={{ delay: 5, y: '-750vh', opacity: 0 }} target={20} position="14" />
+                    <Tween to={{ delay: 7, x: '17vw', y: '-810vh', opacity: 0 }} target={21} position="14" />
+                    <Tween to={{ delay: 7, x: '53vw', y: '-810vh', opacity: 0 }} target={22} position="14" />
                 </Timeline>
             </ScrollTrigger>
         </section>
