@@ -189,3 +189,10 @@ section {
   -webkit-text-fill-color: transparent;
   /* text-shadow: 0px 4px 12px rgba(2, 27, 255, 0.288); */
 }
+
+.lightbulb {
+  height: 25vh;
+  position: absolute;
+  top:30vh;
+  left:15vw;
+}
