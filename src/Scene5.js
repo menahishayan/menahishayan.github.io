@@ -1,26 +1,19 @@
 import { Scene } from 'react-scrollmagic'
-import { Tween, SplitChars, ScrollTrigger } from 'react-gsap';
+import { Tween, ScrollTrigger, Timeline } from 'react-gsap';
 import './App.css'
 
-const Scene1 = () => (
+const Scene5 = () => (
     <Scene pin>
-        <section className="slide-1">
-            {/* <ScrollTrigger start="300px center" end="900px center" scrub={0.1} markers >
-                        <Tween to={{ y: '-300px' }}>
-                            <h1 className="main-title">Menahi Shayan</h1>
-                        </Tween>
-                    </ScrollTrigger> */}
-            <h1 className="main-title">Menahi Shayan</h1>
-
-            <ScrollTrigger start="10px center" end="900px center" scrub={0.1} >
-                <Tween from={{ opacity: 0 }} stagger={0.1} duration={2}>
-                    <SplitChars wrapper={<div className="subtitle" />}>
-                        Developer.&nbsp;&nbsp;Designer.&nbsp;&nbsp;Product Manager.
-                    </SplitChars>
-                </Tween>
+        <section className="slide-5" style={{backgroundColor: '#f3f3f3'}}>
+            <ScrollTrigger start="50px center" end="600px center" scrub={0.5} >
+                <Timeline
+                    target={
+                        <div/>
+                    }>
+                </Timeline>
             </ScrollTrigger>
         </section>
     </Scene>
 )
 
-export default Scene1;
+export default Scene5;

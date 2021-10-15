@@ -5,6 +5,7 @@ import Scene1 from './Scene1'
 import Scene2 from './Scene2'
 import Scene3 from './Scene3'
 import Scene4 from './Scene4'
+import Scene5 from './Scene5'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Scene2 />
             <Scene3 />
             <Scene4 />
+            <Scene5 />
             {
                 ['white', '#f3f3f3'].map((c, i) => (
                     <Scene key={i} pin>
