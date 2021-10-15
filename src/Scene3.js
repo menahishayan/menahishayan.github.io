@@ -40,8 +40,8 @@ const Scene3 = () => (
 
                             <img src={oven} style={{ width: '50vw', marginTop: '-32vh', marginRight: '35vw' }} alt="oven" />
                             <div>
-                                <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: 50 }}>Like Inventing<br />The Automated Oven</div>
-                                <div className="para" style={{ width: '30vw' }}><br /><br />
+                                <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: '5vh' }}>Like Inventing<br />The Automated Oven</div>
+                                <div className="para" style={{ width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     A one of a kind retrofitted feat of engineering, this oven uses IoT sensors and on-device machine learning to identify the
                                     food you place and automatically set the time and temperature.<br /><br />
                                     All you have to do is place the item in.
@@ -73,8 +73,8 @@ const Scene3 = () => (
                     <Tween to={{ delay: 4, opacity: 0 }} target={2} position="8" />
                     <Tween to={{ delay: 4, opacity: 0 }} target={3} position="8" />
 
-                    <Tween from={{ x: '70vw', y: '-65vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={5} />
-                    <Tween from={{ x: '65vw', y: '-60vh', opacity: 0 }} to={{ x: '65vw', y: '-65vh', opacity: 1 }} target={6} />
+                    <Tween from={{ x: '68vw', y: '-70vh', opacity: 0 }} to={{ x: '63vw', y: '-70vh', opacity: 1 }} target={5} />
+                    <Tween from={{ x: '63vw', y: '-65vh', opacity: 0 }} to={{ x: '63vw', y: '-70vh', opacity: 1 }} target={6} />
 
                     <Tween to={{ delay: 5, opacity: 0, y: '-30vh' }} target={4} position="11" />
                     <Tween to={{ delay: 5, opacity: 0, y: '-105vh' }} target={5} position="11" />
