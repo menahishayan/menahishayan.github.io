@@ -20,6 +20,8 @@ const Scene5 = () => (
                             <img src="./images/ledglow2.png" alt="lightbulb" className="lightbulb" />
                             <div className="slide-3-pretext" style={{ textAlign: 'left', marginLeft: '35vw', marginBottom: '0', color: '#555' }}>or...<br /><br /><br /></div>
                             <div className="slide-3-statement" style={{ textAlign: 'left', marginLeft: '35vw', fontSize: 70 }}>Building A Popular<br />Home Automation API</div>
+                            <img src="./images/box.png" alt="package box" className="package-box" />
+                            <div className="slide-3-statement" style={{ textAlign: 'center',  fontSize: 70, position:'absolute',top:'22vh',width:'100vw',color:'wheat' }}>HomeScript</div>
                         </Fragment>
                     }
                     labels={Array(30).map((_, a) => { return { label: a + '', position: a } })}
@@ -41,12 +43,13 @@ const Scene5 = () => (
                     >
                         <Tween from={{ opacity: 0 }} position="0" stagger={0.03} ease="elastic.out(0.4, 0.1)" />
                         {
-                            ['ef8a85', 'e685ef', '85b1ef', 'b685ef', 'efc385'].map((str, j) => {
+                            ['#ef8a85', '#85b1ef', '#b685ef', '#efc385', 'off    '].map((str, j) => {
                                 return Array.from(str).map((c, i) =>
-                                    <Tween from={{ opacity: 0 }} to={{ delay: 0.06 * i, text: c, opacity: 1 }} target={14 + i} position={((1 + j) * 2) + ""} />
+                                    <Tween from={{ opacity: 0 }} to={{ delay: 0.06 * i, text: c, opacity: 1 }} target={13 + i} position={((1 + j) * 2) + ""} />
                                 )
                             })
                         }
+                        <Tween to={{ delay: 0.7, left: '-35vw', top: '12vh', transform: 'scale(0)', opacity: 0 }} position="12" ease="elastic.out(0.1, 0.2)" />
                     </Timeline>
                     {
                         [-32, -180, -127, 0].map((h, i) => (
@@ -59,6 +62,14 @@ const Scene5 = () => (
                     <Tween to={{ delay: 1.5, opacity: 1 }} target={2} position="13" />
                     <Tween to={{ delay: 1, opacity: 0 }} target={3} position="13" />
                     <Tween to={{ delay: 1, opacity: 0 }} target={1} position="13" />
+
+                    <Tween from={{ x: '-10vw', y: '10vh', opacity: 0 }} to={{x:'-5vw', y: '0vh', opacity: 1}} target={6} position="15" ease="back.out(4)"/>
+                    <Tween to={{ delay: 0.8, x: '-5vw', y: '30vh', transform: 'scale(0.3)', opacity: 0 }} target={2} position="15" ease="elastic.out(0.1, 0.2)" />
+                    <Tween to={{ delay: 1.2, x: '-45vw', y: '55vh', transform: 'scale(0.2)', opacity: 0 }} target={4} position="15" ease="elastic.out(0.1, 0.2)" />
+                    <Tween to={{ delay: 1, x: '-48vw', y: '35vh', transform: 'scale(0.1)', opacity: 0 }} target={5} position="15" ease="elastic.out(0.1, 0.2)" />
+
+                    <Tween from={{x:'-5vw',y:0,transform:'rotate(20deg)'}} to={{ x:'10vw',y: '-55vh', transform: 'rotate(0deg)' }} target={6} position="17" ease="back.out(1.5)"/>
+                    <Tween from={{opacity:0}} to={{ opacity: 1 }} target={7} position="18" />
 
                 </Timeline>
             </ScrollTrigger>

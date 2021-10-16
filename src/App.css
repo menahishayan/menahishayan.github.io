@@ -79,7 +79,7 @@ section {
   height: 2000px;
 }
 
- .slide-5 {
+.slide-5 {
   height: 3000px;
 }
 
@@ -210,7 +210,10 @@ section {
   /* margin: 2vh 0 1vh 35vw; */
   font-weight: 600;
   text-align: left;
-  margin-left:0.1vw;
+  margin-left: 0.1vw;
+  position: relative;
+  top: -13vh;
+  left: -5vw;
 }
 
 .slide-5-code:first-of-type {
@@ -219,5 +222,13 @@ section {
   /* margin: 2vh 0 1vh 35vw; */
   font-weight: 600;
   text-align: left;
-  margin-left:-4vw;
+  margin-left: -4vw;
+}
+
+.package-box {
+  height: 20vh;
+  transform: rotate(20deg);
+  position: relative;
+  top: 20vh;
+  left: -25vw;
 }
