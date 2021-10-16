@@ -23,13 +23,13 @@ const Scene4 = () => (
                             <br />
                             <div className="slide-4-statement">And a beautifully designed<br />revolutionary mobile app.</div>
                             <div style={{ backgroundColor: 'white', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '50vh', left: '35vw' }} ></div>
-                            <div style={{ position: 'relative', left: '150vw' }}>
+                            <div style={{ position: 'relative', left: '200vw' }}>
                                 <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: '5vh' }}>Vibrant, yet<br />Elegant Design.</div>
                                 <div className="para" style={{ width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     The meticulously crafted interface does away with all of the boring knobs and switches and introduces vibrant, familiar UI elements such as the pause and play button, sliders, carousels, rich icons, vibrant colors and exciting animations.<br /><br />All while maintaining the elegance of a standardized interface and consistent design principles.
                                 </div><br /><br /><br />
                             </div>
-                            <div style={{ flexDirection: 'row', display: 'flex', position: 'relative', left: '150vw' }}>{techBadges(['React Native', 'Websockets'])}</div>
+                            <div style={{ flexDirection: 'row', display: 'flex', position: 'relative', left: '200vw' }}>{techBadges(['React Native', 'Websockets'])}</div>
                             <div>
                                 <div className="slide-3-statement" style={{ textAlign: 'center', fontSize: '5vh', width: '30vw' }}>Eat, Repeat.</div>
                                 <div className="para" style={{ textAlign: 'center', width: '30vw', fontSize: '2.5vh' }}><br /><br />
@@ -75,8 +75,8 @@ const Scene4 = () => (
                     <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} target={13} position="3" />
                     <Tween to={{ delay: 0.5, transform: 'rotate(0deg)', x: '-10vh', y: '25vw' }} target={1} position="2" />
 
-                    <Tween from={{ x: '-50vw', y: '-435vh', opacity: 0 }} to={{ delay: 0.5, x: '-55vw', y: '-435vh', opacity: 1 }} target={14} position="3" />
-                    <Tween from={{ x: '-55vw', y: '-430vh', opacity: 0 }} to={{ delay: 0.5, x: '-55vw', y: '-435vh', opacity: 1 }} target={15} position="3" />
+                    <Tween from={{ x: '-100vw', y: '-435vh', opacity: 0 }} to={{ delay: 1, x: '-105vw', y: '-435vh', opacity: 1 }} target={14} position="4" />
+                    <Tween from={{ x: '-105vw', y: '-430vh', opacity: 0 }} to={{ delay: 1, x: '-105vw', y: '-435vh', opacity: 1 }} target={15} position="4" />
 
                     <Tween to={{ delay: 2, x: '-60vw', y: '-435vh', opacity: 0 }} from={{ x: '-55vw', y: '-435vh', opacity: 1 }} target={14} position="6" />
                     <Tween to={{ delay: 2, x: '-55vw', y: '-430vh', opacity: 0 }} from={{ x: '-55vw', y: '-435vh', opacity: 1 }} target={15} position="6" />
