@@ -79,12 +79,16 @@ section {
   height: 2000px;
 }
 
+.slide-4 {
+  height: 1100px;
+}
+
 .slide-5 {
   height: 3800px;
 }
 
-.slide-4 {
-  height: 1100px;
+.slide-6{
+  height: 2500px;
 }
 
 .slide-2-statement {
@@ -138,6 +142,33 @@ section {
   word-wrap: normal;
   font-weight: 400;
   text-align: left;
+}
+
+.router-fg {
+  background: url("router-fg.jpg") no-repeat fixed center; 
+  background-size: cover;
+}
+
+.router-bg {
+  background: url("router-bg.jpg") no-repeat fixed center; 
+  background-size: cover;
+}
+
+.slide-6-para {
+  font-size: 22px;
+  word-wrap: normal;
+  font-weight: 400;
+  position: absolute;
+  top: 45vh;
+  left: 0;
+  text-align: center;
+  width: 40vw;
+  padding-left: 30vw;
+  padding-right: 30vw;
+  -webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+  filter: saturate(500%) contrast(200%)
 }
 
 .tech-badge-container {
