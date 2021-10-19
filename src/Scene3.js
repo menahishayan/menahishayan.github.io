@@ -29,7 +29,7 @@ const Scene3 = () => (
                     <Tween to={{ delay: 15, opacity: 0 }} />
                 </Timeline>
             </ScrollTrigger>
-            <ScrollTrigger start="240vh center" end="900vh center" scrub={0.3}>
+            <ScrollTrigger start="240vh center" end="1000vh center" scrub={0.3}>
                 <Timeline
                     target={
                         <Fragment>

@@ -76,11 +76,11 @@ section {
 }
 
 .slide-3 {
-  height: 2000px;
+  height: 1300px;
 }
 
 .slide-4 {
-  height: 1100px;
+  height: 2000px;
 }
 
 .slide-5 {
@@ -92,7 +92,7 @@ section {
 }
 
 .slide-7 {
-  height: 2500px;
+  height: 1300px;
 }
 
 .slide-2-statement {
@@ -240,6 +240,17 @@ section {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   /* text-shadow: 0px 4px 12px rgba(2, 27, 255, 0.288); */
+}
+
+.slide-7-statement {
+  font-size: 70px;
+  font-weight: 800;
+  position: relative;
+  top: 30vh;
+  color: white;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  text-shadow: 0px 4px 2rem rgba(0, 0, 0, 0.432);
 }
 
 .lightbulb {

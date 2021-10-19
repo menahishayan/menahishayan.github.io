@@ -8,7 +8,7 @@ import { techBadges } from './Components'
 const Scene4 = () => (
     <Scene pin>
         <section className="slide-4" style={{ position: 'relative', top: '-120vh' }}>
-            <ScrollTrigger start="0vh center" end="1300vh center" scrub={0.7}>
+            <ScrollTrigger start="0vh center" end="2200vh center" scrub={0.7}>
                 <Timeline
                     wrapper={<div style={{ position: 'relative', top: '-50vh', left: '-35vw' }} />}
                     target={

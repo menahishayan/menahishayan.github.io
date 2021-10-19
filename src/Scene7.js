@@ -27,14 +27,15 @@ const Scene7 = () => (
                                 <br /><br />
                                 Leveraging the power of edge computing infrastructure, a centralized cloud service, machine learning, and procedural automation, the OneEdu Platform is a game-changer in bringing educational administration methods to the 21st century.
                             </div>
+                            <div style={{ flexDirection: 'row', display: 'flex', position: 'absolute', top: '125vh', left: '35vw', paddingLeft: '44vw', paddingRight: '44vw', width:'12vw' }}>{techBadges(['React Native', 'Linux'])}</div>
                         </Fragment>
                     }
                     labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
                 >
                     <Tween from={{ x: '-105vw', y: '-50vh', opacity: 0 }} target={4} position="0" ease="back.out(0.8)" />
-                    <Tween from={{ x: '-105vw', y: '-155vh', opacity: 0 }} target={6} position="0" ease="back.out(0.8)" />
+                    <Tween from={{ x: '-103vw', y: '-155vh', opacity: 0 }} target={6} position="0" ease="back.out(0.8)" />
                     <Tween from={{ x: '135vw', y: '155vh', opacity: 0 }} target={8} position="0" ease="back.out(0.8)" />
-                    <Tween from={{ x: '145vw', y: '150vh', opacity: 0 }} target={0} position="0" ease="back.out(0.8)" />
+                    <Tween from={{ x: '148vw', y: '150vh', opacity: 0 }} target={0} position="0" ease="back.out(0.8)" />
                     <Tween from={{ x: '135vw', y: '155vh', opacity: 0 }} target={1} position="0" ease="back.out(0.8)" />
                     <Tween from={{ x: '140vw', y: '152vh', opacity: 0 }} target={3} position="0" ease="back.out(0.8)" />
                     <Tween from={{ x: '-135vw', y: '-105vh', opacity: 0 }} target={10} position="0" ease="back.out(0.8)" />
@@ -50,6 +51,7 @@ const Scene7 = () => (
 
                     <Tween to={{ y: '-18vh', transform: 'scale(0.7)' }} target={12} position="2" ease="back.out(0.8)" />
                     <Tween from={{ opacity: 0 }} to={{ delay: 0.5, opacity: 1 }} target={13} position="2" />
+                    <Tween from={{ opacity: 0 }} to={{ delay: 0.8, opacity: 1 }} target={14} position="2" />
                     
                     <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={6} position="4" />
                     <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={0} position="4" />
@@ -60,6 +62,7 @@ const Scene7 = () => (
                     <Tween to={{ transform: 'scale(0)', opacity: 0 }} target={10} position="4" />
                     <Tween to={{ delay: 0.1, transform: 'scale(0.2)', opacity: 0 }} target={12} position="4" />
                     <Tween to={{ delay: 0.1, transform: 'scale(0.2)', opacity: 0 }} target={13} position="4" />
+                    <Tween to={{ delay: 0.1, transform: 'scale(0.2)', opacity: 0 }} target={14} position="4" />
                 </Timeline>
             </ScrollTrigger>
         </section>

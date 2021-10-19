@@ -8,6 +8,7 @@ import Scene4 from './Scene4'
 import Scene5 from './Scene5'
 import Scene6 from './Scene6'
 import Scene7 from './Scene7'
+import Scene8 from './Scene8'
 
 function App() {
     return (
@@ -19,15 +20,9 @@ function App() {
             <Scene5 />
             <Scene6 />
             <Scene7 />
-            {
-                ['white', '#f3f3f3'].map((c, i) => (
-                    <Scene key={i} pin>
-                        <section style={{ backgroundColor: c }}>
-                            <h1>Slide {i + 8}</h1>
-                        </section>
-                    </Scene>
-                ))
-            }
+            <Scene8 />
+
+            <Scene pin><section style={{ backgroundColor: 'white' }}><h1>Slide 9</h1></section></Scene>
         </Controller>
     )
 }
