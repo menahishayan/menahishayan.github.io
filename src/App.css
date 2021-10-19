@@ -87,13 +87,16 @@ section {
   height: 3800px;
 }
 
-.slide-6{
+.slide-6 {
+  height: 3000px;
+}
+
+.slide-7 {
   height: 2500px;
 }
 
 .slide-2-statement {
   font-size: 60px;
-  /* display: inline-block; */
   margin-bottom: 12vh;
   font-weight: 700;
   font-style: italic;
@@ -101,7 +104,6 @@ section {
 
 .slide-3-statement {
   font-size: 60px;
-  /* display: inline-block; */
   font-weight: 700;
 }
 
@@ -145,12 +147,12 @@ section {
 }
 
 .router-fg {
-  background: url("router-fg.jpg") no-repeat fixed center; 
+  background: url("router-fg.jpg") no-repeat fixed center;
   background-size: cover;
 }
 
 .router-bg {
-  background: url("router-bg.jpg") no-repeat fixed center; 
+  background: url("router-bg.jpg") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -166,8 +168,8 @@ section {
   padding-left: 30vw;
   padding-right: 30vw;
   -webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+  background-clip: text;
+  color: transparent;
   filter: saturate(500%) contrast(200%)
 }
 
@@ -222,6 +224,19 @@ section {
   /* background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% ); */
   /* background: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgba(37,249,245,1) 0%, rgba(8,70,218,1) 90% ); */
   background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 0px 4px 12px rgba(2, 27, 255, 0.288); */
+}
+
+.slide-6-statement {
+  font-size: 70px;
+  font-weight: 800;
+  position: relative;
+  top: -390vh;
+  left: 35vw;
+  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   /* text-shadow: 0px 4px 12px rgba(2, 27, 255, 0.288); */

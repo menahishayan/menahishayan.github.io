@@ -13,13 +13,13 @@ const Scene4 = () => (
                     wrapper={<div style={{ position: 'relative', top: '-50vh', left: '-35vw' }} />}
                     target={
                         <Fragment>
-                            <img src="./screens/1.png" alt="history screen" className="oven-screenshot" style={{ left: '-5vw' }} />
-                            <img src="./screens/3.png" alt="main screen" className="oven-screenshot" style={{ top: '10vh' }} /><br />
-                            <img src="./screens/4.png" alt="energy screen" className="oven-screenshot" style={{ top: '-15vh', left: '22vw' }} />
-                            <img src="./screens/1.png" alt="history screen" className="oven-screenshot" style={{ top: '-60vh', left: '56vw' }} /><br />
-                            <img src="./screens/2.png" alt="automation screen" className="oven-screenshot" style={{ top: '-105vh', left: '55vw' }} /><br />
-                            <img src="./screens/4.png" alt="energy screen" className="oven-screenshot" style={{ top: '-174vh', left: '98vw' }} /><br />
-                            <img src="./screens/7.png" alt="settings screen" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} />
+                            <img src="./screens/Oven/1.png" alt="history screen" className="oven-screenshot" style={{ left: '-5vw' }} />
+                            <img src="./screens/Oven/3.png" alt="main screen" className="oven-screenshot" style={{ top: '10vh' }} /><br />
+                            <img src="./screens/Oven/4.png" alt="energy screen" className="oven-screenshot" style={{ top: '-15vh', left: '22vw' }} />
+                            <img src="./screens/Oven/1.png" alt="history screen" className="oven-screenshot" style={{ top: '-60vh', left: '56vw' }} /><br />
+                            <img src="./screens/Oven/2.png" alt="automation screen" className="oven-screenshot" style={{ top: '-105vh', left: '55vw' }} /><br />
+                            <img src="./screens/Oven/4.png" alt="energy screen" className="oven-screenshot" style={{ top: '-174vh', left: '98vw' }} /><br />
+                            <img src="./screens/Oven/7.png" alt="settings screen" className="oven-screenshot" style={{ top: '-264vh', left: '-14vw' }} />
                             <br />
                             <div className="slide-4-statement">And a beautifully designed<br />revolutionary mobile app.</div>
                             <div style={{ backgroundColor: 'white', height: '100vh', width: '100vw', zIndex: -9, position: 'absolute', top: '50vh', left: '35vw' }} ></div>
@@ -36,22 +36,22 @@ const Scene4 = () => (
                                     User-specific and global history tracking, filtering, tweaking, analytics and recommendations right from the same simple colorful interface.
                                 </div><br /><br /><br />
                             </div>
-                            <img src="./screens/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)', opacity:0 }} />
+                            <img src="./screens/Oven/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)', opacity:0 }} />
                             <div style={{ opacity:0}}>
                                 <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: '5vh', width: '30vw' }}>With great power, comes little responsibility.</div>
                                 <div className="para" style={{ textAlign: 'left', width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     Get real-time energy analytics and smart energy monitoring. The oven automatically helps you cut down on costs, so you don’t have to.
                                 </div><br /><br /><br />
                             </div>
-                            <img src="./screens/4.png" alt="energy screen" className="oven-screenshot" style={{ transform: 'rotate(0deg)' }} />
+                            <img src="./screens/Oven/4.png" alt="energy screen" className="oven-screenshot" style={{ transform: 'rotate(0deg)' }} />
                             <div>
                                 <div className="slide-3-statement" style={{ textAlign: 'center', fontSize: '5vh', width: '30vw' }}>Build your own cookbook.</div>
                                 <div className="para" style={{ textAlign: 'center', width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     Leverage the power of scripting to create series of commands that your oven will follow, automatically, with no intervention.
                                 </div><br /><br /><br />
                             </div>
-                            <img src="./screens/2.png" alt="automation screen 1" className="oven-screenshot" style={{ transform: 'scale(1.1)' }} />
-                            <img src="./screens/5.png" alt="automation screen 2" className="oven-screenshot" style={{ transform: 'scale(1.1)' }} />
+                            <img src="./screens/Oven/2.png" alt="automation screen 1" className="oven-screenshot" style={{ transform: 'scale(1.1)' }} />
+                            <img src="./screens/Oven/5.png" alt="automation screen 2" className="oven-screenshot" style={{ transform: 'scale(1.1)' }} />
                         </Fragment>
                     }
                     labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}

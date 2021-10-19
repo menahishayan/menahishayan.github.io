@@ -8,7 +8,7 @@ import { techBadges } from './Components'
 const Scene6 = () => (
     <Scene pin>
         <section className="slide-6 router-fg">
-            <ScrollTrigger start="450vh center" end="1200vh center" scrub={0.5} markers>
+            <ScrollTrigger start="450vh center" end="1500vh center" scrub={0.5}>
                 <Timeline
                     target={
                         <Fragment>
@@ -34,7 +34,7 @@ const Scene6 = () => (
                     }
                     labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
                 >
-                    <Tween from={{ width: '100vw' }} to={{ width: '0' }} target={0} />
+                    <Tween from={{ width: '100vw', overflow: 'hidden' }} to={{ delay: 0.5,width: '0', overflow: 'hidden' }} target={0} position="0"/>
                     <Tween to={{ transform: 'scale(0.7)', y: '-5vh' }} target={1} position="2" />
                     <Tween to={{ transform: 'scale(0.5)', y: '-15vh', x: '-42vh' }} target={2} position="2" />
                     <Tween to={{ transform: 'scale(0.7)', y: '-43vh' }} target={3} position="2" />
@@ -45,7 +45,7 @@ const Scene6 = () => (
 
                 </Timeline>
             </ScrollTrigger>
-            <ScrollTrigger start="900px center" end="1600px center" scrub={0.5} markers>
+            <ScrollTrigger start="1200px center" end="2000px center" scrub={0.5}>
                 <Timeline
                     target={
                         <Fragment>
