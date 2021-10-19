@@ -12,7 +12,7 @@ gsap.registerPlugin(TextPlugin);
 const Scene5 = () => (
     <Scene pin>
         <section className="slide-5" style={{ background: 'linear-gradient(315deg, #2d3436 0%, #000000 74%)', paddingTop: '5vh' }}>
-            <ScrollTrigger start="150px center" end="2500px center" scrub={0.7} markers>
+            <ScrollTrigger start="150px center" end="2500px center" scrub={0.7}>
                 <Timeline
                     target={
                         <Fragment>
@@ -30,7 +30,7 @@ const Scene5 = () => (
                                 This popular script serves as the underlying framework to run home automations and opens your home to a world of scripting capabilites!<br /><br />
                                 With command-line controls, a fully importable API, group functions, intelligent support for loosely-typed commands and EasyMatch referencing, HomeScript is the simplest and most robust way of automating your HomeKit installation!
                             </div>
-                            <div style={{ position: 'absolute', bottom: '300vh', flexDirection: 'row', display: 'flex', paddingLeft: '40vw', filter: 'drop-shadow(0 0 0.8rem rgba(255,206,252,0.9))' }}>
+                            <div style={{ position: 'absolute', top: '80vh', flexDirection: 'row', display: 'flex', paddingLeft: '40vw', filter: 'drop-shadow(0 0 0.8rem rgba(255,206,252,0.9))' }}>
                                 {techBadges(['Python', 'GitHub', 'PyPI'])}
                             </div>
                         </Fragment>
@@ -84,8 +84,29 @@ const Scene5 = () => (
 
                     <Tween from={{ opacity: 0 }} to={{ delay: 0.5, opacity: 1 }} target={8} position="18" />
                     <Tween from={{ opacity: 0 }} to={{ delay: 1, opacity: 1 }} target={9} position="18" />
-                    <Tween from={{ opacity: 0 }} to={{ delay: 1.5,opacity: 1 }} target={10} position="18" />
+                    <Tween from={{ opacity: 0 }} to={{ delay: 1.5, opacity: 1 }} target={10} position="18" />
 
+                    <Tween to={{ delay: 1, opacity: 0 }} target={9} position="20" />
+                </Timeline>
+            </ScrollTrigger>
+            <ScrollTrigger start="2100px center" end="3000px center" scrub={0.3}>
+                <Timeline
+                    target={
+                        <Fragment>
+                            <div className="slide-3-statement" style={{ color: 'white', position: 'absolute', top: '50vh', fontSize: 70, textAlign: 'center', width: '100vw' }}>0+</div>
+                            <div className="para" style={{ color: 'rgba(255,206,252,0.7)', fontWeight: 600, position: 'absolute', top: '60vh', textAlign: 'center', width: '100vw' }}>Peak Monthly Downloads</div>
+                            <div className="para" style={{ color: 'rgba(255,206,252,0.7)', fontWeight: 600, position: 'absolute', top: '60vh', textAlign: 'center', width: '100vw' }}>Total Users</div>
+                        </Fragment>
+                    }
+                    labels={Array(10).map((_, a) => { return { label: a + '', position: a } })}
+                >
+                    <Tween from={{ opacity: 0 }} position="0" target={0}/>
+                    <Tween from={{ opacity: 0 }} position="0" target={1}/>
+                    <Tween to={{ count: { value: 350, format: () => value => Math.round(value) + '+' }, delay:0.5 }} target={0} position="0" />
+
+                    <Tween to={{ opacity: 0 }} position="2" target={1}/>
+                    <Tween  from={{ opacity: 0 }} to={{ delay:0.7,opacity: 1 }} position="2" target={2}/>
+                    <Tween to={{ count: { value: 2000, format: () => value => Math.round(value) + '+' } }} target={0} position="2" />
                 </Timeline>
             </ScrollTrigger>
         </section>

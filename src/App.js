@@ -6,6 +6,7 @@ import Scene2 from './Scene2'
 import Scene3 from './Scene3'
 import Scene4 from './Scene4'
 import Scene5 from './Scene5'
+import Scene6 from './Scene6'
 
 function App() {
     return (
@@ -15,11 +16,12 @@ function App() {
             <Scene3 />
             <Scene4 />
             <Scene5 />
+            <Scene6 />
             {
                 ['white', '#f3f3f3'].map((c, i) => (
                     <Scene key={i} pin>
                         <section style={{ backgroundColor: c }}>
-                            <h1>Slide {i + 6}</h1>
+                            <h1>Slide {i + 7}</h1>
                         </section>
                     </Scene>
                 ))
