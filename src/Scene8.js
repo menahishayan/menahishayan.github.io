@@ -55,15 +55,15 @@ const Scene8 = () => (
             <ScrollTrigger start="400vh center" end="2200vh center" scrub={1} >
                 <Timeline
                     target={<HoveringWordsBackdrop list={techStack} />}
-                    labels={Array(20).map((_, a) => { return { label: a + '', position: a } })}
+                    labels={Array(1).map((_, a) => { return { label: a + '', position: a } })}
                 >
                     {
                         techStack.map((r, j) => (
                             <Fragment>
                                 <Tween to={{ x: getHoverDistance(j) }} target={"r" + (j + 1)} position="0" />
                                 {
-                                    [...r.slice(-2), ...r, ...r.slice(0, 2)].map((w, i) => (
-                                        <Tween from={{ opacity: randoms[j][i].from }} to={{  opacity: randoms[j][i].to }} target={`r${j + 1}w${i + 1}`} position="0" />
+                                    [...r.slice(-2), ...r, ...r.slice(0, 2)].map((_, i) => (
+                                        <Tween from={{ opacity: randoms[j][i].from }} to={{ opacity: randoms[j][i].to }} target={`r${j + 1}w${i + 1}`} position="0" />
                                     ))
                                 }
                             </Fragment>

@@ -9,6 +9,7 @@ import Scene5 from './Scene5'
 import Scene6 from './Scene6'
 import Scene7 from './Scene7'
 import Scene8 from './Scene8'
+import Scene9 from './Scene9'
 
 function App() {
     return (
@@ -21,8 +22,8 @@ function App() {
             <Scene6 />
             <Scene7 />
             <Scene8 />
-
-            <Scene pin><section style={{ backgroundColor: 'white' }}><h1>Slide 9</h1></section></Scene>
+            <Scene9 />
+            <Scene pin><section style={{ backgroundColor: 'white' }}><h1>End Scene</h1></section></Scene>
         </Controller>
     )
 }
