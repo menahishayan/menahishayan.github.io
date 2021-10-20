@@ -260,7 +260,7 @@ section {
 .word-backdrop{
   font-size: 10vh;
   font-weight: 800;
-  color: white;
+  color: rgb(255, 132, 179);
   margin: 2vw;
 }
 

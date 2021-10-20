@@ -56,7 +56,7 @@ const Scene5 = () => (
                         {
                             ['#ef8a85', '#85b1ef', '#b685ef', '#efc385', 'off    '].map((str, j) => {
                                 return Array.from(str).map((c, i) =>
-                                    <Tween from={{ opacity: 0 }} to={{ delay: 0.06 * i, text: c, opacity: 1 }} target={13 + i} position={((1 + j) * 2) + ""} />
+                                    <Tween key={i} from={{ opacity: 0 }} to={{ delay: 0.06 * i, text: c, opacity: 1 }} target={13 + i} position={((1 + j) * 2) + ""} />
                                 )
                             })
                         }
@@ -64,7 +64,7 @@ const Scene5 = () => (
                     </Timeline>
                     {
                         [-32, -180, -127, 0].map((h, i) => (
-                            <Fragment>
+                            <Fragment key={i}>
                                 <Tween to={{ filter: `hue-rotate(${h}deg) saturate(${h !== 0 ? 2 : 1})` }} target={1} position={((i * 2) + 5) + ""} />
                                 <Tween to={{ filter: `hue-rotate(${h}deg) saturate(${h !== 0 ? 2 : 1})` }} target={3} position={((i * 2) + 5) + ""} />
                             </Fragment>
