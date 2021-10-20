@@ -258,10 +258,10 @@ section {
 }
 
 .word-backdrop{
-  font-size: 12vh;
+  font-size: 10vh;
   font-weight: 800;
   color: white;
-  margin: 1vh 2vw;
+  margin: 2vw;
 }
 
 .lightbulb {
