@@ -103,6 +103,10 @@ section {
   height: 1600px;
 }
 
+.slide-10 {
+  height: 1600px;
+}
+
 .slide-2-statement {
   font-size: 60px;
   margin-bottom: 12vh;
@@ -182,11 +186,8 @@ section {
 }
 
 .tech-badge-container {
-  /* height: 40px;
-  width: 40px; */
   padding: 15px;
   border-radius: 50px;
-  /* border: 2px solid black; */
   margin: 10px;
   position: relative;
 }
@@ -194,6 +195,28 @@ section {
 .tech-badge {
   height: 45px;
   width: 45px;
+}
+
+.link-badge {
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+  transition: 0.5s;
+  filter: grayscale(1);
+  cursor: pointer;
+}
+
+.link-badge:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  filter: grayscale(0)
+}
+
+.link-badge-container {
+  padding: 15px;
+  border-radius: 50px;
+  margin: 25px;
+  position: relative;
 }
 
 .tooltiptext {
@@ -270,6 +293,17 @@ section {
   padding-left: 10vw;
   padding-right: 10vw;
   font-style: italic;
+}
+
+.slide-10-statement {
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+  top: 15vh;
+  color: rgb(158, 158, 158);
+  padding-left: 10vw;
+  padding-right: 10vw;
+  /* text-shadow: 0px 4px 2rem rgba(0, 0, 0, 0.15); */
 }
 
 .word-backdrop {
@@ -416,7 +450,7 @@ p.left-bubble-grey::after {
 
 .read-more {
   position: absolute;
-  bottom:15px;
+  bottom: 15px;
   right: 25px;
   font-size: 14px;
   opacity: 0.4;
@@ -425,4 +459,30 @@ p.left-bubble-grey::after {
 .read-more:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.267);
+  box-shadow: 0 3px 2rem rgba(82, 80, 80, 0.205);
+  position: relative;
+  top: 28vh;
+  margin-right: 33vw;
+  margin-left: 33vw;
+  border-radius: 3vh;
+  padding: 12px 30px;
+  display: flex;
+}
+
+.profile-pic {
+  height: 16vh;
+  width: 16vw;
+  border-radius: 8vh;
+  display: inline-block;
+  margin: 2.5vh 1vh;
+}
+
+.card-right-subcontainer {
+  display: inline-block;
+  margin: 3vh 3vh;
+  margin-left: 2vh;
 }
