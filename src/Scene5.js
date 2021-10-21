@@ -31,7 +31,7 @@ const Scene5 = () => (
                                 With command-line controls, a fully importable API, group functions, intelligent support for loosely-typed commands and EasyMatch referencing, HomeScript is the simplest and most robust way of automating your HomeKit installation!
                             </div>
                             <div style={{ position: 'absolute', top: '80vh', flexDirection: 'row', display: 'flex', paddingLeft: '40vw', filter: 'drop-shadow(0 0 0.8rem rgba(255,206,252,0.9))' }}>
-                                {techBadges(['Python', 'GitHub', 'PyPI'])}
+                                {techBadges(['Python', { title: 'GitHub', url: 'https://github.com/menahishayan/HomeScript' }, 'PyPI'])}
                             </div>
                         </Fragment>
                     }
@@ -100,12 +100,12 @@ const Scene5 = () => (
                     }
                     labels={Array(10).map((_, a) => { return { label: a + '', position: a } })}
                 >
-                    <Tween from={{ opacity: 0 }} position="0" target={0}/>
-                    <Tween from={{ opacity: 0 }} position="0" target={1}/>
-                    <Tween to={{ count: { value: 350, format: () => value => Math.round(value) + '+' }, delay:0.5 }} target={0} position="0" />
+                    <Tween from={{ opacity: 0 }} position="0" target={0} />
+                    <Tween from={{ opacity: 0 }} position="0" target={1} />
+                    <Tween to={{ count: { value: 350, format: () => value => Math.round(value) + '+' }, delay: 0.5 }} target={0} position="0" />
 
-                    <Tween to={{ opacity: 0 }} position="2" target={1}/>
-                    <Tween  from={{ opacity: 0 }} to={{ delay:0.7,opacity: 1 }} position="2" target={2}/>
+                    <Tween to={{ opacity: 0 }} position="2" target={1} />
+                    <Tween from={{ opacity: 0 }} to={{ delay: 0.7, opacity: 1 }} position="2" target={2} />
                     <Tween to={{ count: { value: 2000, format: () => value => Math.round(value) + '+' } }} target={0} position="2" />
                 </Timeline>
             </ScrollTrigger>

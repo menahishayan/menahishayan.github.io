@@ -474,9 +474,9 @@ p.left-bubble-grey::after {
 }
 
 .profile-pic {
-  height: 16vh;
-  width: 16vw;
-  border-radius: 8vh;
+  height: 140px;
+  width: 140px;
+  border-radius: 70px;
   display: inline-block;
   margin: 2.5vh 1vh;
 }
@@ -485,4 +485,10 @@ p.left-bubble-grey::after {
   display: inline-block;
   margin: 3vh 3vh;
   margin-left: 2vh;
+}
+
+.selectable {
+  user-select: text;
+  -webkit-user-select: text;
+  cursor: text;
 }

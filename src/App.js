@@ -1,4 +1,4 @@
-import { Controller, Scene } from 'react-scrollmagic'
+import { Controller } from 'react-scrollmagic'
 import './App.css'
 
 import Scene1 from './Scene1'

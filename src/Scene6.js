@@ -28,7 +28,7 @@ const Scene6 = () => (
                                 The APIs also extend as Home Assistant Packages, thereby enabling IoT network access and control of routers via home automation systems.
                             </div>
                             <div style={{ position: 'absolute', top: '80vh', flexDirection: 'row', display: 'flex', paddingLeft: '40vw', filter: 'drop-shadow(0 0 0.8rem rgba(255,206,252,0.9))' }}>
-                                {techBadges(['Python', 'GitHub', 'PyPI'])}
+                                {techBadges(['Python', {title: 'GitHub', url: 'https://github.com/menahishayan/TP-Link-Archer-C50-API'}, 'PyPI'])}
                             </div>
                         </Fragment>
                     }

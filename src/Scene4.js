@@ -29,15 +29,15 @@ const Scene4 = () => (
                                     The meticulously crafted interface does away with all of the boring knobs and switches and introduces vibrant, familiar UI elements such as the pause and play button, sliders, carousels, rich icons, vibrant colors and exciting animations.<br /><br />All while maintaining the elegance of a standardized interface and consistent design principles.
                                 </div><br /><br /><br />
                             </div>
-                            <div style={{ flexDirection: 'row', display: 'flex', position: 'relative', left: '200vw' }}>{techBadges(['React Native', 'Websockets'])}</div>
+                            <div style={{ flexDirection: 'row', display: 'flex', position: 'relative', left: '200vw' }}>{techBadges(['React Native', 'Websockets', { title: 'GitHub', url: 'https://github.com/menahishayan/Automated-Oven-App' }])}</div>
                             <div>
                                 <div className="slide-3-statement" style={{ textAlign: 'center', fontSize: '5vh', width: '30vw' }}>Eat, Repeat.</div>
                                 <div className="para" style={{ textAlign: 'center', width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     User-specific and global history tracking, filtering, tweaking, analytics and recommendations right from the same simple colorful interface.
                                 </div><br /><br /><br />
                             </div>
-                            <img src="./screens/Oven/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)', opacity:0 }} />
-                            <div style={{ opacity:0}}>
+                            <img src="./screens/Oven/1.png" alt="history screen" className="oven-screenshot" style={{ transform: 'scale(1.5)', opacity: 0 }} />
+                            <div style={{ opacity: 0 }}>
                                 <div className="slide-3-statement" style={{ textAlign: 'left', fontSize: '5vh', width: '30vw' }}>With great power, comes little responsibility.</div>
                                 <div className="para" style={{ textAlign: 'left', width: '30vw', fontSize: '2.5vh' }}><br /><br />
                                     Get real-time energy analytics and smart energy monitoring. The oven automatically helps you cut down on costs, so you don’t have to.
