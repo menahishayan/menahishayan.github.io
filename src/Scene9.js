@@ -32,19 +32,22 @@ const RandomBubbles = forwardRef((props, ref) => {
     )
 });
 
-// fixed randoms
+const outerCount = 10
+const randomFactors = [...Array(outerCount)].map(_ => [Math.random().toFixed(1) * 1.1 + 0.6, Math.random().toFixed(2) * 1, Math.random().toFixed(1) * 10 + 2, Math.random().toFixed(1) * 10 + 2])
 
 const Scene9 = () => (
     <Scene pin>
         <section className="slide-9" style={{ background: 'linear-gradient(135deg, #f8f8f8 0%, #ece9e6 100%)' }}>
             <ScrollTrigger start="0vh center" end="1400vh center" scrub={1}>
                 <Timeline
-                    target={<RandomBubbles innerCount={3} outerCount={10} />}
+                    target={<RandomBubbles innerCount={3} outerCount={outerCount} />}
                     labels={Array(1).map((_, a) => { return { label: a + '', position: a } })}
                 >
                     {
-                        [...Array(10)].map((_, i) =>
-                            <Tween from={{ opacity: 0 }} to={{ opacity: 1, transform: `scale(${Math.random().toFixed(1) * 1.1 + 0.6})`, x: `${Math.random() > 0.5 ? '-' : ''}${Math.random().toFixed(1) * 10 + 2}vw`, y: `-${Math.random().toFixed(1) * 10 + 2}vh` }} target={`g${i + 1}`} position="0" />
+                        randomFactors.map((r, i) =>
+                            <Tween key={i} from={{ opacity: 0 }}
+                                to={{ opacity: 1, transform: `scale(${r[0]})`, x: `${r[1] > 0.5 ? '-' : ''}${r[2]}vw`, y: `-${r[3]}vh` }}
+                                target={`g${i + 1}`} position="0" />
                         )
                     }
                 </Timeline>
@@ -56,11 +59,11 @@ const Scene9 = () => (
                             <div className="slide-9-statement">Backed By Strong Recommendations.</div>
                             <div className="recommendation" style={{ background: 'linear-gradient(251deg, #21D4FD 0%, #B721FF 100%)', top: '20vh', left: '10vw', boxShadow: '0 3px 3rem rgba(82, 80, 80, 0.405)' }}>
                                 <p className="left-bubble">Shayan has demonstrated excellent communication skills, strong leadership, dilligence, compassion, and admirable helpfulness.</p>
-                                <div className="read-more">Source</div>
+                                <div className="read-more" onClick={() => window.location.href = './LOR1.pdf'}>Source</div>
                             </div>
                             <div className="recommendation" style={{ background: 'linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)', top: '25vh', marginLeft: '50vw' }}>
                                 <p className="right-bubble">It is clear that he will be an exceptional asset to any institution or workforce he shall be a part of.</p>
-                                <div className="read-more">Source</div>
+                                <div className="read-more" onClick={() => window.location.href = './LOR2.pdf'}>Source</div>
                             </div>
                         </Fragment>
                     }
