@@ -261,6 +261,17 @@ section {
   text-shadow: 0px 4px 2rem rgba(0, 0, 0, 0.45);
 }
 
+.slide-9-statement {
+  font-size: 60px;
+  font-weight: 800;
+  position: relative;
+  top: 10vh;
+  color: black;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-style: italic;
+}
+
 .word-backdrop{
   font-size: 10vh;
   font-weight: 800;
@@ -302,4 +313,56 @@ section {
   position: relative;
   top: 20vh;
   left: -25vw;
+}
+
+.recommendation {
+  color: white;
+  background-color: blue;
+  border-radius: 35px;
+  padding: 1px 25px;
+  margin: 20px;
+  width: 35vw;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 3px 2rem rgba(82, 80, 80, 0.205);
+}
+
+.recommendation p::before,
+.recommendation p::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+p.right-bubble::before {
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid  #765CFA ;
+  right: -0.35rem;
+  transform: translate(0, -0.45rem) scale(1.5,1.7);
+}
+
+p.right-bubble::after {
+  background-color: #ece9e6;
+  border-bottom-left-radius: 0.5rem;
+  right: -42px;
+  transform:translate(-30px, -8px) scale(1.5,1.7);
+  width: 10px;
+}
+
+p.left-bubble::before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid  #B721FF ;
+  left: -0.45rem;
+  transform: translate(0, -0.45rem) scale(1.5,1.7);
+}
+
+p.left-bubble::after {
+  background-color: #ece9e6;
+  border-bottom-right-radius: 0.5rem;
+  left: 18px;
+  transform:translate(-30px, -8px) scale(1.5,1.7);
+  width: 10px;
 }
