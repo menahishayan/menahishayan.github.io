@@ -32,10 +32,12 @@ const RandomBubbles = forwardRef((props, ref) => {
     )
 });
 
+// fixed randoms
+
 const Scene9 = () => (
     <Scene pin>
         <section className="slide-9" style={{ background: 'linear-gradient(135deg, #f8f8f8 0%, #ece9e6 100%)' }}>
-            <ScrollTrigger start="0vh center" end="1400vh center" scrub={1} markers>
+            <ScrollTrigger start="0vh center" end="1400vh center" scrub={1}>
                 <Timeline
                     target={<RandomBubbles innerCount={3} outerCount={10} />}
                     labels={Array(1).map((_, a) => { return { label: a + '', position: a } })}
@@ -47,7 +49,7 @@ const Scene9 = () => (
                     }
                 </Timeline>
             </ScrollTrigger>
-            <ScrollTrigger start="0vh center" end="1400vh center" scrub={1} markers>
+            <ScrollTrigger start="0vh center" end="1400vh center" scrub={1}>
                 <Timeline
                     target={
                         <Fragment>

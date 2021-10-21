@@ -23,7 +23,7 @@ function App() {
             <Scene7 />
             <Scene8 />
             <Scene9 />
-            <Scene pin><section style={{ backgroundColor: 'white' }}><h1>End Scene</h1></section></Scene>
+            <Scene pin><section style={{ backgroundColor: 'white' }}><h1>Connect With Me</h1></section></Scene>
         </Controller>
     )
 }
