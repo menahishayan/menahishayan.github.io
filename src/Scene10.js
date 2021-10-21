@@ -18,7 +18,7 @@ const Scene10 = () => (
                             <div className="card">
                                 <img className="profile-pic" src={dp} alt="dp" />
                                 <div className="card-right-subcontainer">
-                                    <div className="para selectable" style={{ fontSize: 26, fontWeight: 700, color: 'black', marginTop: 20, lineHeight: '4vh'}}>Menahi Shayan</div>
+                                    <div className="para selectable" style={{ fontSize: 26, fontWeight: 700, color: 'black', marginTop: 20, lineHeight: '4vh' }}>Menahi Shayan</div>
                                     <div className="para selectable" style={{ fontSize: 20, lineHeight: '3vh', marginTop: 3 }}>menahi.shayan@gmail.com<br />+91 89717 29383</div>
                                 </div>
                             </div>
