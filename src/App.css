@@ -425,7 +425,7 @@ p.left-bubble-grey::after {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.267);
+  background-color: rgba(255, 255, 255, 0.548);
   box-shadow: 0 3px 2rem rgba(82, 80, 80, 0.205);
   position: relative;
   top: 28vh;

@@ -59,11 +59,11 @@ const Scene8 = () => (
                 >
                     {
                         techStack.map((r, j) => (
-                            <Fragment>
+                            <Fragment key={j}>
                                 <Tween to={{ x: getHoverDistance(j) }} target={"r" + (j + 1)} position="0" />
                                 {
                                     [...r.slice(-2), ...r, ...r.slice(0, 2)].map((_, i) => (
-                                        <Tween from={{ opacity: randoms[j][i].from }} to={{ opacity: randoms[j][i].to }} target={`r${j + 1}w${i + 1}`} position="0" />
+                                        <Tween key={i} from={{ opacity: randoms[j][i].from }} to={{ opacity: randoms[j][i].to }} target={`r${j + 1}w${i + 1}`} position="0" />
                                     ))
                                 }
                             </Fragment>
