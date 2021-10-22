@@ -1,5 +1,5 @@
 import { Scene } from 'react-scrollmagic'
-import { Tween, ScrollTrigger, Timeline, SplitWords } from 'react-gsap';
+import { Tween, ScrollTrigger, Timeline } from 'react-gsap';
 import { Fragment, forwardRef, useImperativeHandle, useRef } from 'react';
 import './App.css'
 
@@ -9,10 +9,7 @@ import heart from './images/heart.png'
 import oven from './images/oven2.png'
 
 const HalfSplitSentence = forwardRef((props, ref) => {
-    const wrapper = useRef(null)
-    const first = useRef(null)
-    const last = useRef(null)
-
+    const wrapper = useRef(null), first = useRef(null), last = useRef(null)
     useImperativeHandle(ref, () => ({ wrapper, first, last }));
     return (
         <div ref={wrapper}>
