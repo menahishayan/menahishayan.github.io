@@ -10,7 +10,6 @@ const Scene1 = () => (
                     <h1 className="main-title">Menahi Shayan</h1>
                 </Tween>
             </ScrollTrigger>
-            {/* <h1 className="main-title">Menahi Shayan</h1> */}
 
             <ScrollTrigger start="80vh center" end="900vh center" scrub={0.5}>
                 <Tween from={{ opacity: 0 }} stagger={0.1}>

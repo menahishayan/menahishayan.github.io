@@ -11,6 +11,7 @@ const RandomBubbles = forwardRef((props, ref) => {
         groupRef.current.forEach((g, i) => obj['g' + (i + 1)] = { current: g })
         return obj
     });
+    
     return (
         [...Array(props.outerCount)].map((_, i) =>
             <div key={i} ref={d => groupRef.current[i] = d}>
