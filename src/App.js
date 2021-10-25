@@ -12,6 +12,29 @@ import Scene8 from './Scene8'
 import Scene9 from './Scene9'
 import Scene10 from './Scene10'
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAXGKpJaCEsgpx0Py7y16zbkHbkaVuqk2g",
+  authDomain: "shayan-personal.firebaseapp.com",
+  databaseURL: "https://shayan-personal.firebaseio.com",
+  projectId: "shayan-personal",
+  storageBucket: "shayan-personal.appspot.com",
+  messagingSenderId: "55744480941",
+  appId: "1:55744480941:web:e372fee3a0ba786f6ca824",
+  measurementId: "G-LXYEP6DPCW"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 function App() {
     return (
         <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
