@@ -3,7 +3,7 @@ import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import { Fragment } from "react";
 import "./App.css";
 
-import { techBadges } from "./Components";
+import { techBadges } from "../src/app/Components";
 
 const Scene6 = () => (
   <Scene pin>

@@ -5,7 +5,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import "./App.css";
 import { Fragment } from "react";
 
-import { techBadges } from "./Components";
+import { techBadges } from "../src/app/Components";
 
 gsap.registerPlugin(TextPlugin);
 

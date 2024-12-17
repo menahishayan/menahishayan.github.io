@@ -5,7 +5,7 @@ import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import { Fragment, forwardRef, useImperativeHandle, useRef } from "react";
 import "./App.css";
 
-import { techBadges } from "./Components";
+import { techBadges } from "../src/app/Components";
 
 import heart from "./images/heart.png";
 import oven from "./images/oven2.png";
