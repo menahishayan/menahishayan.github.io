@@ -1,6 +1,7 @@
-import { Scene } from 'react-scrollmagic'
-import { Tween, SplitChars, ScrollTrigger } from 'react-gsap';
-import './App.css'
+import { Scene } from "react-scrollmagic";
+import { Tween, SplitChars, ScrollTrigger } from "react-gsap";
+import "./App.css";
+import "./index.css";
 
 const Scene1 = () => (
   <Scene pin>
