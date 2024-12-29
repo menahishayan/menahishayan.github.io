@@ -9,7 +9,7 @@ export default function Hero() {
         <p className="font-bold text-lg">Hi, I'm</p>
         <h1 className="main-title">Menahi Shayan</h1>
         <p className="subtitle">
-          the Founding Engineer at Zenduty, and CTO and Cofounder of Next Up. I've led engineering teams to scale SaaS products and have spoken
+          the Founding Engineer at Zenduty, and Ex-CTO and Cofounder of Next Up. I've led engineering teams to scale SaaS products and have spoken
           internationally on what I've learnt from it.
         </p>
       </div>

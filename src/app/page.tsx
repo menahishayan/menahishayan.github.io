@@ -1,12 +1,8 @@
 import "./index.css";
-import Hero from "./sections/Hero";
+import * as Sections from "./sections";
 
 function App() {
-  return (
-    <div className="root-wrapper">
-      <Hero />
-    </div>
-  );
+  return Object.values(Sections).map((Section, index) => <Section key={index} />);
 }
 
 export default App;
