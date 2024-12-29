@@ -1,4 +1,3 @@
-import "./index.css";
 import * as Sections from "./sections";
 
 function App() {

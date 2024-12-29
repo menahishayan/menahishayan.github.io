@@ -1,12 +1,11 @@
 export default function WorkExp() {
   return (
     <section>
-      <h1>Some of my works</h1>
+      <h1>Lets Connect</h1>
       <div>
-        <h2>Schedules</h2>
-        <h2>Mobile App</h2>
-        <h2>Landing Pages & Customer Onboarding</h2>
-        <h2>Enso Design Libraries</h2>
+        <h2>LinkedIn</h2>
+        <h2>Twitter</h2>
+        <h2>Email</h2>
       </div>
     </section>
   );

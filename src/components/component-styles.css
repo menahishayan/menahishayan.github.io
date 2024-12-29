@@ -1,0 +1,15 @@
+.tweet-container > article {
+  --tweet-header-font-size: 14px;
+  --tweet-body-font-size: 14px;
+  --tweet-quoted-body-font-size: 14px;
+  --tweet-info-font-size:12px;
+
+  --tweet-header-line-height: 1.25;
+  --tweet-body-line-height: 1.325;
+  --tweet-quoted-body-line-height: 1.25;
+}
+
+.tweet-container {
+    break-inside: avoid;
+    --tweet-container-margin: 0.5rem 0 !important;
+}
