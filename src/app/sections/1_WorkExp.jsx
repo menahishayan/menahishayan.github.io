@@ -1,13 +1,15 @@
+import { Card, CardWrapper } from "@/components/Card";
+
 export default function WorkExp() {
   return (
-    <section>
+    <section className="bg-blue-100">
       <h1>Some of my works</h1>
-      <div>
-        <h2>Schedules</h2>
-        <h2>Mobile App</h2>
-        <h2>Landing Pages & Customer Onboarding</h2>
-        <h2>Enso Design Libraries</h2>
-      </div>
+      <CardWrapper>
+        <Card title="Schedules" />
+        <Card title="Mobile App" />
+        <Card title="Landing Pages & Customer Onboarding" />
+        <Card title="Enso Design Libraries" />
+      </CardWrapper>
     </section>
   );
 }

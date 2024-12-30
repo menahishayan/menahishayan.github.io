@@ -1,16 +1,16 @@
-export default function WorkExp() {
+import { Card, CardWrapper } from "@/components/Card";
+
+export default function Products() {
   return (
-    <section>
+    <section className="bg-pink-100">
       <h1>
-        My <span className="emoji">{"\u2665"}</span> for the Open Source Community
+        Things I've built<span className="emoji">{"👷🏻"}</span>
       </h1>
-      <div>
-        <h2>raycast/extensions</h2>
-        <h2>HomeScript (& my talk on it)</h2>
-        <h2>Home-Assistant-TP-Link-Router</h2>
-        <h2>HomeAssistant-Cupertino-Icons</h2>
-        <h2>getsentry/sentry-docs</h2>
-      </div>
+      <CardWrapper>
+        <Card title="NURover" />
+        <Card title="AI & IoT driven Oven (IEEE)" />
+        <Card title="Nightstand Display HomeAssistant" />
+      </CardWrapper>
     </section>
   );
 }

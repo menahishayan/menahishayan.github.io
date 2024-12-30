@@ -13,3 +13,7 @@
     break-inside: avoid;
     --tweet-container-margin: 0.5rem 0 !important;
 }
+
+.card-item {
+  @apply bg-white shadow-md rounded-lg p-4 h-60 w-60 flex items-end cursor-pointer;
+}

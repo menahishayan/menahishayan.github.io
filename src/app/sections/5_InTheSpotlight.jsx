@@ -1,4 +1,4 @@
-import { Tweet } from "../../components/Tweet";
+import { Tweet } from "@/components/Tweet";
 
 const TWEETS = {
   default: [
@@ -27,9 +27,9 @@ const TWEETS = {
   ],
 };
 
-export default function WorkExp() {
+export default function Spotlight() {
   return (
-    <section className="w-[100vw] h-auto">
+    <section className="w-[100vw] h-auto bg-orange-100">
       <h1>In the Spotlight</h1>
       <ul className="xl:columns-3 gap-2 columns-2 not-md:block">
         {TWEETS.default.map((id) => (

@@ -1,4 +1,4 @@
-export default function WorkExp() {
+export default function Connect() {
   return (
     <section>
       <h1>Lets Connect</h1>

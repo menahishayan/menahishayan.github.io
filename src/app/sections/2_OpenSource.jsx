@@ -1,16 +1,18 @@
-export default function WorkExp() {
+import { Card, CardWrapper } from "@/components/Card";
+
+export default function OpenSource() {
   return (
-    <section>
+    <section className="bg-teal-100">
       <h1>
-        My <span className="emoji">{"\u2665"}</span> for the Open Source Community
+        My <span className="emoji">{" ♥️ "}</span> for the Open Source Community
       </h1>
-      <div>
-        <h2>raycast/extensions</h2>
-        <h2>HomeScript (& my talk on it)</h2>
-        <h2>Home-Assistant-TP-Link-Router</h2>
-        <h2>HomeAssistant-Cupertino-Icons</h2>
-        <h2>getsentry/sentry-docs</h2>
-      </div>
+      <CardWrapper>
+        <Card title="raycast/extensions" />
+        <Card title="HomeScript (& my talk on it)" />
+        <Card title="Home-Assistant-TP-Link-Router" />
+        <Card title="HomeAssistant-Cupertino-Icons" />
+        <Card title="getsentry/sentry-docs" />
+      </CardWrapper>
     </section>
   );
 }
