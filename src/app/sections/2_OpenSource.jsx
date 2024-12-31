@@ -4,7 +4,7 @@ export default function OpenSource() {
   return (
     <section className="bg-teal-100">
       <h1>
-        My <span className="emoji">{" ♥️ "}</span> for the Open Source Community
+        My <span className="emoji">{" ♥️"}</span> for the Open Source Community
       </h1>
       <CardWrapper>
         <Card title="raycast/extensions" />

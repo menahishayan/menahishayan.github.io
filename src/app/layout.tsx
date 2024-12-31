@@ -1,3 +1,5 @@
+import BetaTag from "@/components/Beta";
+import Header from "@/components/Header";
 import type { Metadata } from "next";
 import "./index.css";
 
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="root-wrapper">{children}</body>
+      <body className="root-wrapper">
+        <BetaTag />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
