@@ -10,26 +10,31 @@ const WORK_EXP_CARDS = [
     title: "Alert Rules",
     image: AlertRules,
     color: "#3F2B96",
+    id: "alert-rules",
   },
   {
     title: "Schedules",
     image: Schedules,
     color: "#A8C0FF",
+    id: "schedules",
   },
   {
     title: "Mobile App",
     image: MobileApp,
     color: "#FF6B6B",
+    id: "mobile-app",
   },
   {
     title: "Landing Pages & Customer Onboarding",
     image: LandingPages,
     color: "#FFB6B6",
+    id: "landing-pages",
   },
   {
     title: "Enso Design Libraries",
     image: EnsoDesignLibraries,
     color: "#6BFFB6",
+    id: "enso-design-libraries",
   },
 ];
 

@@ -1,4 +1,7 @@
-import { Card, CardWrapper } from "@/components/Card";
+import openSourceArticles from "@/cms/open_source.json";
+import dynamic from "next/dynamic";
+
+const OpenSourceClient = dynamic(() => import("./OpenSourceClient"), { ssr: true });
 
 export default function OpenSource() {
   return (
@@ -6,13 +9,7 @@ export default function OpenSource() {
       <h1>
         My <span className="emoji">{" ♥️"}</span> for the Open Source Community
       </h1>
-      <CardWrapper>
-        <Card title="raycast/extensions" />
-        <Card title="HomeScript (& my talk on it)" />
-        <Card title="Home-Assistant-TP-Link-Router" />
-        <Card title="HomeAssistant-Cupertino-Icons" />
-        <Card title="getsentry/sentry-docs" />
-      </CardWrapper>
+      <OpenSourceClient articles={openSourceArticles} />
     </section>
   );
 }
