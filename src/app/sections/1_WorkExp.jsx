@@ -44,12 +44,17 @@ export default function WorkExp() {
           className="absolute top-[1.5%] left-[9%] w-[82%] h-auto aspect-[16/9.3] rounded-lg"
           style={{ background: "linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%)" }}
         >
-          <div className="w-full h-full overflow-x-scroll overflow-y-hidden no-scrollbar">
-            <CardWrapper className="h-full !my-0" style={{ width: `calc(100%*${WORK_EXP_CARDS.length})` }}>
+          <div
+            className="w-full h-full overflow-x-scroll overflow-y-hidden no-scrollbar snap-x snap-mandatory"
+            style={{ scrollSnapType: "x mandatory" }}
+          >
+            <CardWrapper className="h-full !my-0 flex" style={{ width: `calc(100%*${WORK_EXP_CARDS.length})` }}>
               {WORK_EXP_CARDS.map((card, index) => (
-                <Card key={index} title={card.title} image={card.image} id={`work-exp-card-${index}`}>
-                  <Image alt={card.title} src={card.image} style={{ objectFit: "contain", padding: "5%", paddingBottom: "7%" }} />
-                </Card>
+                <div key={index} className="snap-center flex-shrink-0 h-full" style={{ width: `calc(100%/${WORK_EXP_CARDS.length})` }}>
+                  <Card title={card.title} image={card.image} id={`work-exp-card-${index}`}>
+                    <Image alt={card.title} src={card.image} style={{ objectFit: "contain", padding: "5%", paddingBottom: "7%" }} />
+                  </Card>
+                </div>
               ))}
             </CardWrapper>
           </div>
