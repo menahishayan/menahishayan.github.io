@@ -5,7 +5,7 @@ const OpenSourceClient = dynamic(() => import("./OpenSourceClient"), { ssr: true
 
 export default function OpenSource() {
   return (
-    <section className="bg-teal-100">
+    <section className="bg-teal-100 dark:bg-teal-950 section-open-source" id="open-source">
       <h1>
         My <span className="emoji">{" ♥️"}</span> for the Open Source Community
       </h1>

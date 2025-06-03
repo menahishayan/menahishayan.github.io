@@ -3,7 +3,7 @@ import heroImage from "../../assets/hero-avatar.png";
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-2 px-32 gap-16 sticky top-0">
+    <section className="section-hero" id="hero">
       <div>
         <p className="font-bold text-lg">Hi, I'm</p>
         <h1 className="main-title">Menahi Shayan</h1>

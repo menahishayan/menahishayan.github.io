@@ -2,7 +2,7 @@ import { Card, CardWrapper } from "@/components/Card";
 
 export default function Stories() {
   return (
-    <section>
+    <section className="bg-yellow-100 dark:bg-yellow-950 section-stories" id="stories">
       <h1>Documenting Chaos</h1>
       <CardWrapper>
         <Card title="AWS Reinvent crash" />

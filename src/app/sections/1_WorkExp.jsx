@@ -40,7 +40,7 @@ const WORK_EXP_CARDS = [
 
 export default function WorkExp() {
   return (
-    <section className="bg-blue-100 section-work-exp">
+    <section className="bg-blue-100 dark:bg-blue-950 section-work-exp" id="work-exp">
       <h1>Some of my works</h1>
       <h2>{WORK_EXP_CARDS[0].title}</h2>
       <div className="relative w-full h-auto aspect-[16/10]">

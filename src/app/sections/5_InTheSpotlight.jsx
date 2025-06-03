@@ -29,7 +29,7 @@ const TWEETS = {
 
 export default function Spotlight() {
   return (
-    <section className="w-[100vw] h-auto bg-orange-100">
+    <section className="w-[100vw] h-auto bg-orange-100 dark:bg-orange-950 section-spotlight" id="in-the-spotlight">
       <h1>In the Spotlight</h1>
       <ul className="xl:columns-3 gap-2 columns-2 not-md:block">
         {TWEETS.default.map((id) => (

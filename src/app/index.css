@@ -19,9 +19,17 @@ code {
 }
 
 section {
-  @apply h-full w-full items-center justify-center px-14 py-10;
+  @apply h-full w-full items-center justify-center px-14 py-10 snap-start text-black dark:text-white;
 }
 
+section.section-hero {
+  @apply grid grid-cols-2 px-32 gap-16 sticky top-0 -z-10 from-[#e6e9f0] to-[#eef1f5] dark:from-[#1a1a1a] dark:to-[#333333] bg-gradient-to-t;
+  /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+}
+
+header {
+  @apply bg-gray-800/35 py-2 px-6 self-end my-2 rounded-full shadow-lg fixed top-0 left-[50%] -translate-x-[50%] w-auto whitespace-nowrap z-50 backdrop-blur-md border-[0.75px] border-white/20
+}
 section.section-work-exp {
   @apply h-[120vh] overflow-hidden;
 }
@@ -31,7 +39,7 @@ section.section-work-exp {
 }
 
 h1 {
-  @apply text-4xl font-bold;
+  @apply text-4xl font-bold text-black dark:text-white;
 }
 
 .main-title {
@@ -44,4 +52,8 @@ h1 {
 
 .more-btn {
   @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}
+
+.nav-link {
+  @apply text-white font-bold text-sm;
 }
