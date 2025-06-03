@@ -1,0 +1,96 @@
+[
+    {
+        "title": "React Summit 2025 (Upcoming)",
+        "description": "Shayan will be speaking at React Summit 2025 in Amsterdam, The Netherlands, sharing insights on advanced React patterns, scalable architectures, and the future of frontend development.",
+        "date": "June 2025",
+        "location": "Amsterdam, The Netherlands",
+        "link": "http://reactsummit.com/"
+    },
+    {
+        "title": "TheGeekConf Berlin",
+        "description": "At TheGeekConf Berlin (July 2024, Berlin, Germany), Shayan shared insights on building scalable React and React Native products, focusing on real-world engineering challenges and intuitive UX design. The talk highlighted practical strategies for leading teams and delivering production-grade applications.",
+        "date": "July 2024",
+        "location": "Berlin, Germany",
+        "link": "http://thegeekconf.com/",
+        "video": "https://www.youtube.com/live/7Z4W2Je-SoQ?si=l0RTGKoetvS8ek2Y&t=11059",
+        "embed": "https://www.youtube.com/embed/7Z4W2Je-SoQ?start=11059"
+    },
+    {
+        "title": "Talent500 React-n-Roll",
+        "description": "At Talent500 React-n-Roll (March 2024, Bengaluru, India), Shayan discussed modern React development, team leadership, and the importance of developer experience in building robust applications.",
+        "date": "March 2024",
+        "location": "Bengaluru, India",
+        "link": "https://www.meetup.com/techinsider-bangalore/events/297211203/"
+    },
+    {
+        "title": "FOSS United",
+        "description": "At FOSS United (December 2023, Bengaluru, India), Shayan presented on open source contributions, community-driven development, and the impact of collaborative engineering on the tech ecosystem.",
+        "date": "December 2023",
+        "location": "Bengaluru, India",
+        "link": "https://fossunited.org/",
+        "video": "https://youtu.be/1-8keTJKuTE?t=22",
+        "embed": "https://www.youtube.com/embed/1-8keTJKuTE?start=22"
+    },
+    {
+        "title": "React India 2023",
+        "description": "At React India 2023 (October 2023, Goa Velha, India), Shayan discussed advanced patterns in React and shared his experience as a founding engineer, emphasizing the importance of developer experience and maintainable codebases in large-scale projects.",
+        "date": "October 2023",
+        "location": "Goa Velha, India",
+        "link": "https://www.reactindia.io/",
+        "video": "https://www.youtube.com/watch?v=fOmvSDH8seI",
+        "embed": "https://www.youtube.com/embed/fOmvSDH8seI"
+    },
+    {
+        "title": "React Bangalore",
+        "description": "At React Bangalore (June 2023, Bengaluru, India), Shayan shared practical tips for React developers, focusing on performance optimization and real-world use cases from his work at Zenduty.",
+        "date": "June 2023",
+        "location": "Bengaluru, India",
+        "link": "https://twitter.com/reactify_in",
+        "video": "https://youtu.be/QdSNaM1L60k",
+        "embed": "https://www.youtube.com/embed/QdSNaM1L60k"
+    },
+    {
+        "title": "GeekyAnts",
+        "description": "During his session at GeekyAnts (May 2023, Bengaluru, India), Shayan discussed the future of React Native and cross-platform development, highlighting best practices and lessons learned from leading engineering teams.",
+        "date": "May 2023",
+        "location": "Bengaluru, India",
+        "link": "https://geekyants.com/",
+        "video": "https://www.youtube.com/live/Rp5bYPV5kjg?feature=share&t=4249",
+        "embed": "https://www.youtube.com/embed/Rp5bYPV5kjg?start=4249"
+    },
+    {
+        "title": "RV Institute of Technology Protatva 2023",
+        "description": "At RV Institute of Technology Protatva 2023 (April 2023, Bengaluru, India), Shayan delivered a session on modern web development and the future of frontend engineering.",
+        "date": "April 2023",
+        "location": "Bengaluru, India",
+        "link": "http://www.rvitm.edu.in/"
+    },
+    {
+        "title": "New Horizon College of Engineering (Oct 2022)",
+        "description": "At New Horizon College of Engineering (October 2022, Bengaluru, India), Shayan spoke about JavaScript, React, and the evolving landscape of frontend technologies.",
+        "date": "October 2022",
+        "location": "Bengaluru, India",
+        "link": "https://newhorizoncollegeofengineering.in/"
+    },
+    {
+        "title": "New Horizon College of Engineering (Apr 2022)",
+        "description": "At New Horizon College of Engineering (April 2022, Bengaluru, India), Shayan presented on TypeScript, React Native, and building scalable applications.",
+        "date": "April 2022",
+        "location": "Bengaluru, India",
+        "link": "https://newhorizoncollegeofengineering.in/"
+    },
+    {
+        "title": "RV Institute of Technology",
+        "description": "At RV Institute of Technology (April 2022, Bengaluru, India), Shayan discussed the importance of UX in modern web and mobile applications.",
+        "date": "April 2022",
+        "location": "Bengaluru, India",
+        "link": "http://rvitm.edu.in/"
+    },
+    {
+        "title": "PES University",
+        "description": "At PES University (February 2020, Bengaluru, India), Shayan gave a talk on Machine Learning, AR/VR, and the intersection of emerging technologies with modern product development.",
+        "date": "February 2020",
+        "location": "Bengaluru, India",
+        "link": "https://pes.edu/"
+    }
+]
