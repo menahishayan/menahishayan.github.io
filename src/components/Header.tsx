@@ -19,7 +19,7 @@ export default function Header() {
         <ul className="flex space-x-4 gap-4">
           {sectionNames.map(({ display, id }) => (
             <li key={id}>
-              <Link href={`#${id}`} className="nav-link">
+              <Link href={`/#${id}`} className="nav-link" replace>
                 {display}
               </Link>
             </li>

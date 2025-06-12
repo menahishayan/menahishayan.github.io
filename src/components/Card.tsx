@@ -1,15 +1,24 @@
 import clsx from "clsx";
+import Link from "next/link";
 
 export function Card({
   title,
   children,
   className,
+  link,
   ...props
-}: { title: string; children: React.ReactNode; className?: string } & React.HTMLAttributes<HTMLLIElement>) {
-  return (
+}: { title: string; children: React.ReactNode; className?: string; link?: string } & React.HTMLAttributes<HTMLLIElement>) {
+  const content = (
     <li className={clsx("card-item", className)} title={title} {...props}>
       {children || title}
     </li>
+  );
+  return link ? (
+    <Link href={link} scroll={false} legacyBehavior>
+      {content}
+    </Link>
+  ) : (
+    content
   );
 }
 

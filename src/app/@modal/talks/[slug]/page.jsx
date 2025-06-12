@@ -1,9 +1,11 @@
+import { slugify } from "@/app/utils";
 import talks from "@/cms/talks";
 import Modal from "@/components/Modal";
 
 export async function generateMetadata({ params }) {
-  const id = parseInt(params.id, 10);
-  const talk = talks[id];
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
+  const talk = talks.find((t) => slugify(t.title) === slug);
   if (!talk) {
     return {
       title: "Talk not found | Menahi Shayan",
@@ -27,15 +29,17 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function TalkModalPage({ params, searchParams }) {
-  const id = parseInt(params.id, 10);
-  const talk = talks[id];
+export default async function TalkModalPage(props) {
+  const params = await props.params;
+  const searchParams = await props.searchParams;
+  const slug = await params.slug;
+  const talk = talks.find((t) => slugify(t.title) === slug);
   const isModal = searchParams?.modal === "true";
 
   if (!talk) return <div>Talk not found</div>;
 
   const content = (
-    <div className="bg-white max-w-2xl w-full p-6 rounded-xl shadow-xl relative">
+    <article>
       <h2 className="text-xl font-bold mb-2 text-center">{talk.title}</h2>
       <p className="mb-2 text-gray-700 text-center">{talk.description}</p>
       {talk.date && (
@@ -45,7 +49,7 @@ export default function TalkModalPage({ params, searchParams }) {
         </p>
       )}
       {talk.embed && (
-        <div className="aspect-video w-full mb-4 rounded-lg overflow-hidden">
+        <div className="aspect-video max-w-xl mb-4 rounded-lg overflow-hidden self-center">
           <iframe
             src={talk.embed}
             title={talk.title}
@@ -60,7 +64,7 @@ export default function TalkModalPage({ params, searchParams }) {
           {talk.video ? "Watch on YouTube" : "Event Link"}
         </a>
       )}
-    </div>
+    </article>
   );
 
   if (isModal) {
