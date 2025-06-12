@@ -20,4 +20,6 @@ Personal portfolio built with NextJS. WIP
  - [ ] Conferences
     - [ ] Images in articles & thumbnails
     - [ ] [GeekyAnts Blog](https://geekyants.com/en-us/blog/building-production-grade-mono-repos-for-react-and-react-native)
-    
+ - [ ] Contact:
+  - [ ] Remove portfolio
+  - [ ] Dont use Gmail
