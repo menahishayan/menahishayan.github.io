@@ -1,3 +1,3 @@
 export default function DefaultModalContent() {
-  return <div>default</div>;
+  return null;
 }
