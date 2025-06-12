@@ -25,7 +25,10 @@ export default function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center h-full w-full" onClick={handleClose}>
-      <div className="bg-white p-8 rounded-2xl shadow-lg relative max-w-[80vw] max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="bg-white p-10 rounded-2xl shadow-lg relative max-w-[80vw] max-h-[80vh] overflow-y-auto dark:text-white dark:bg-black"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button onClick={handleClose} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none">
           <IconX size={24} />
         </button>

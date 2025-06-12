@@ -12,10 +12,12 @@ Personal portfolio built with NextJS. WIP
     - [ ] Improved Card UI
     - [ ] Detailed posts
     - [ ] Wider Modal UI
+    - [ ] SSG
  - [ ] Things I've built:
     - [ ] Improved Card UI
     - [ ] Detailed posts
     - [ ] Wider Modal UI
  - [ ] Conferences
     - [ ] Images in articles & thumbnails
+    - [ ] [GeekyAnts Blog](https://geekyants.com/en-us/blog/building-production-grade-mono-repos-for-react-and-react-native)
     

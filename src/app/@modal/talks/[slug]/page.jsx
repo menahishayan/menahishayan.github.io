@@ -36,7 +36,7 @@ export default async function TalkModalPage(props) {
   const talk = talks.find((t) => slugify(t.title) === slug);
   const isModal = searchParams?.modal === "true";
 
-  const { default: Article } = await import(`@/cms/talks/${slug}.mdx`);
+  const { default: Article } = await import(`@/cms/talks/${slug}.mdx`).catch(() => ({ default: () => <span /> }));
 
   if (!talk) return <div>Talk not found</div>;
 
@@ -66,7 +66,10 @@ export default async function TalkModalPage(props) {
           {talk.video ? "Watch on YouTube" : "Event Link"}
         </a>
       )}
-      <Article />
+      <hr className="opacity-20 my-6" />
+      <section className="mdx-wrapper">
+        <Article />
+      </section>
     </article>
   );
 

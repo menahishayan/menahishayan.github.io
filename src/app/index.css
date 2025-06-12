@@ -57,3 +57,30 @@ h1 {
 .nav-link {
   @apply text-white font-bold text-sm;
 }
+
+section.mdx-wrapper {
+  all: unset;
+}
+
+section.mdx-wrapper h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+section.mdx-wrapper h2 {
+  @apply text-2xl font-bold mb-3;
+}
+section.mdx-wrapper h3 {
+  @apply text-xl font-bold mb-2;
+}
+section.mdx-wrapper p {
+  @apply text-base mb-4;
+}
+section.mdx-wrapper ul {
+  @apply list-disc pl-5 mb-4;
+}
+section.mdx-wrapper li {
+  @apply mb-2;
+}
+section.mdx-wrapper a {
+  @apply text-blue-500 hover:text-blue-700;
+}
