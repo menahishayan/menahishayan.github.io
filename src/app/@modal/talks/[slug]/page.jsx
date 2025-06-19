@@ -87,3 +87,5 @@ export function generateStaticParams() {
     return { slug };
   });
 }
+
+export const dynamic = "force-static";

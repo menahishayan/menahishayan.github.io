@@ -1,5 +1,5 @@
 import { slugify } from "@/app/utils";
-import openSourceArticles from "@/cms/open_source.json";
+import openSourceArticles from "@/cms/open_source";
 import Modal from "@/components/Modal";
 import Image from "next/image";
 
