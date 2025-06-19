@@ -1,6 +1,7 @@
 import { slugify } from "@/app/utils";
 import openSourceArticles from "@/cms/open_source.json";
 import { Card, CardWrapper } from "@/components/Card";
+import GlassCard from "@/components/GlassCard";
 
 export default function OpenSource() {
   return (
@@ -12,18 +13,8 @@ export default function OpenSource() {
         {openSourceArticles.map((article) => {
           const slug = slugify(article.title);
           return (
-            <Card
-              key={slug}
-              title={article.title}
-              className="flex flex-col justify-end p-0 overflow-hidden h-48 w-48 relative cursor-pointer"
-              link={`/open-source/${slug}?modal=true`}
-            >
-              {article.image && (
-                <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover z-0" loading="lazy" />
-              )}
-              <div className="relative mt-auto w-full text-black p-3 text-center font-semibold" style={{ minHeight: "3em" }}>
-                {article.title}
-              </div>
+            <Card key={slug} title={article.title} link={`/open-source/${slug}?modal=true`} className="glass-card-wrapper">
+              <GlassCard {...article} />
             </Card>
           );
         })}
