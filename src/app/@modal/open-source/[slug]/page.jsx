@@ -1,6 +1,7 @@
 import { slugify } from "@/app/utils";
 import openSourceArticles from "@/cms/open_source.json";
 import Modal from "@/components/Modal";
+import Image from "next/image";
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
@@ -40,9 +41,11 @@ export default async function OpenSourceModalPage(props) {
 
   const content = (
     <article>
-      {article.image && <img src={article.image} alt={article.title} className="w-32 h-32 object-contain mx-auto mb-4 rounded-lg shadow" />}
+      {article.image && (
+        <Image src={article.image} alt={article.title} className="w-32 h-32 object-contain mx-auto mb-4 rounded-lg shadow" height={300} width={300} />
+      )}
       <h2 className="text-xl font-bold mb-2 text-center">{article.title}</h2>
-      <p className="whitespace-pre-line mb-4 text-gray-700">{article.content}</p>
+      <p className="whitespace-pre-line mb-4 text-gray-700 dark:text-gray-300">{article.content}</p>
       <a href={article.url} target="_blank" rel="noopener" className="text-blue-600 underline block text-center">
         View on GitHub
       </a>
@@ -55,4 +58,11 @@ export default async function OpenSourceModalPage(props) {
 
   // Full page SSR fallback
   return <section className="bg-teal-100 dark:bg-teal-950 min-h-screen flex items-center justify-center">{content}</section>;
+}
+
+export function generateStaticParams() {
+  return openSourceArticles.map((article) => {
+    const slug = slugify(article.title);
+    return { slug };
+  });
 }

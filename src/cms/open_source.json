@@ -43,7 +43,7 @@
       "Python"
     ],
     "collaborators": null,
-    "role": "Contributor",
+    "role": "Creator",
     "learn_more_label": "Learn more \u2192"
   },
   {
@@ -60,7 +60,7 @@
       "Python"
     ],
     "collaborators": null,
-    "role": "Contributor",
+    "role": "Creator",
     "learn_more_label": "Learn more \u2192"
   },
   {
@@ -87,7 +87,7 @@
       "JavaScript"
     ],
     "collaborators": null,
-    "role": "Contributor",
+    "role": "Creator",
     "learn_more_label": "Learn more \u2192"
   },
   {
@@ -144,7 +144,7 @@
       "CSS"
     ],
     "collaborators": null,
-    "role": "Contributor",
+    "role": "Creator",
     "learn_more_label": "Learn more \u2192"
   },
   {
@@ -176,7 +176,7 @@
       "TypeScript"
     ],
     "collaborators": null,
-    "role": "Contributor",
+    "role": "Creator",
     "learn_more_label": "Learn more \u2192"
   }
 ]

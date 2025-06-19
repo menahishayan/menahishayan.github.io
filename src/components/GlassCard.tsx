@@ -1,5 +1,5 @@
 import type { default as Schema } from "@/cms/open_source.json";
-import { IconGitFork, IconStar } from "@tabler/icons-react";
+import { IconGitFork, IconStar, IconStarFilled } from "@tabler/icons-react";
 import Image from "next/image";
 
 const IMAGE_FALLBACK = "https://avatars.githubusercontent.com/u/8170437?v=4";
@@ -13,13 +13,9 @@ export default function GlassCard({
   forks,
   tech_stack,
   ...props
-}: (typeof Schema)[number] & React.HTMLAttributes<HTMLDivElement>) {
+}: (typeof Schema)[number] & React.HTMLAttributes<HTMLDivElement> & { focused?: boolean }) {
   return (
-    <div
-      className="glass-card-glass w-full max-w-xs sm:max-w-sm h-[420px] flex flex-col justify-between cursor-pointer transition-transform hover:scale-105"
-      title={title}
-      {...props}
-    >
+    <div className={`glass-card-glass w-full h-[420px] flex flex-col justify-between cursor-pointer`} title={title} {...props}>
       <div>
         <div className="flex items-center gap-2 glass-card-header">
           <span>Open Source</span>
@@ -33,7 +29,10 @@ export default function GlassCard({
         </div>
 
         <div className="mt-4 flex justify-center gap-1 glass-card-stars">
-          {[...Array(Math.round(Math.min(stars / 1000, 5)))].map((_, i) => (
+          {[...Array(Math.round(Math.min(stars / 30, 5)))].map((_, i) => (
+            <IconStarFilled key={i} className="text-yellow-400 w-5 h-5" />
+          ))}
+          {[...Array(5 - Math.round(Math.min(stars / 30, 5)))].map((_, i) => (
             <IconStar key={i} className="text-yellow-400 w-5 h-5" />
           ))}
         </div>

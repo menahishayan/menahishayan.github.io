@@ -10,8 +10,8 @@ export default function Stories() {
         <Card title="onboarding redesign" />
         <Card title="Enso Design Libraries" />
         <Card title="schedules redesign" />
-        <Card title="mobile app design" />
       </CardWrapper>
+      <Card title="mobile app design" />
     </section>
   );
 }
