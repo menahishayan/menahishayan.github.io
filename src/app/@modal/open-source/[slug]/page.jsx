@@ -1,3 +1,4 @@
+import "@/app/index.css";
 import { slugify } from "@/app/utils";
 import openSourceArticles from "@/cms/open_source";
 import Modal from "@/components/Modal";

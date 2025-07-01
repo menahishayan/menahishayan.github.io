@@ -88,3 +88,11 @@ section.mdx-wrapper li {
 section.mdx-wrapper a {
   @apply text-blue-500 hover:text-blue-700;
 }
+.next-gallery__element-S1:hover .gallery-image-overlay-alt {
+  @apply opacity-100;
+}
+
+.gallery-image-overlay-alt {
+  @apply text-white text-xs md:text-xs font-semibold bg-black/50 px-2 py-1 truncate whitespace-nowrap self-end justify-end;
+  @apply backdrop-blur-md absolute bottom-0 left-0 right-0 hover:opacity-100 opacity-0 transition-opacity duration-300 cursor-default select-none;
+}

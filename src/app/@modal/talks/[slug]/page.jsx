@@ -1,3 +1,4 @@
+import "@/app/index.css";
 import { slugify } from "@/app/utils";
 import talks from "@/cms/talks";
 import Modal from "@/components/Modal";
