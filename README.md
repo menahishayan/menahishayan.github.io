@@ -1,56 +1,70 @@
-# Portfolio — menahishayan.github.io
+# Getting Started with Create React App
 
-Personal portfolio website for Shayan Menahi — AI Product Manager and public speaker.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Tech Stack
+## Available Scripts
 
-- **Framework:** Next.js 15 (App Router) + React 19
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS + Framer Motion
-- **Content:** JSON/MDX-based CMS
-- **Deployment:** GitHub Pages
+In the project directory, you can run:
 
-## Project Structure
+### `npm start`
 
-```
-app/                  # Next.js App Router (layout, page, globals)
-components/
-  sections/           # Page sections (Hero, About, Experience, Speaking, etc.)
-  ui/                 # Reusable UI primitives
-lib/                  # Data utilities, animation variants, custom hooks
-cms/                  # Content (talks as MDX, open source projects as JSON)
-public/               # Static assets and gallery photos
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Sections
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- **Hero** — Introduction and headline
-- **Stats Banner** — Animated key metrics
-- **About** — Professional bio
-- **Experience** — Work history
-- **Speaking** — Conference talks and appearances
-- **Photo Gallery** — Event and professional photography
-- **Open Source** — Featured projects with live GitHub stats
-- **Testimonials** — Social proof
-- **Contact** — Call-to-action
+### `npm test`
 
-## Getting Started
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```bash
-npm install
-npm run dev
-```
+### `npm run build`
 
-Open [http://localhost:3000](http://localhost:3000).
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Content Management
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Talks are stored as MDX files in [cms/talks/](cms/talks/) with metadata in `index.json`. Open source project data is in [cms/open_source.json](cms/open_source.json) and can be refreshed from the GitHub API using `cms/populate_json.py`.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Scripts
+### `npm run eject`
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Production build |
-| `npm run lint` | Run ESLint |
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
