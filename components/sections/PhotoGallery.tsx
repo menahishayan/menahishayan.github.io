@@ -6,10 +6,7 @@ import Image from "next/image";
 import { fadeUpVariant, staggerContainer } from "@/lib/variants";
 
 const photos = [
-  { src: "/photos/01.jpg", alt: "React India 2023 — on stage" },
   { src: "/photos/02.jpg", alt: "React India 2023 — talk session" },
-  { src: "/photos/03.jpg", alt: "React India 2023 — audience" },
-  { src: "/photos/04.jpg", alt: "React India 2023 — presenting" },
   { src: "/photos/05.jpg", alt: "React India 2023 — speaker moment" },
   { src: "/photos/06.jpg", alt: "React India 2023 — backstage" },
   { src: "/photos/07.jpg", alt: "React India 2023 — conference" },
