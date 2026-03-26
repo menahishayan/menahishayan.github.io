@@ -49,25 +49,6 @@ export default function About() {
                 vision.
               </motion.p>
 
-              {/* Education */}
-              <motion.div
-                variants={fadeUpVariant}
-                className="flex flex-wrap gap-3"
-              >
-                <span className="glass px-4 py-2.5 rounded-full text-sm font-display text-[#a0a0a0] border border-white/10 leading-tight">
-                  <span className="text-white font-semibold">
-                    MS Eng. Management
-                  </span>{" "}
-                  · Northeastern University
-                </span>
-                <span className="glass px-4 py-2.5 rounded-full text-sm font-display text-[#a0a0a0] border border-white/10 leading-tight">
-                  <span className="text-white font-semibold">
-                    BS Computer Science
-                  </span>{" "}
-                  · VTU
-                </span>
-              </motion.div>
-
               {/* Big stat callout */}
               <motion.div
                 variants={fadeUpVariant}

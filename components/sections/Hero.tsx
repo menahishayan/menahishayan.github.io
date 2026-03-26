@@ -136,6 +136,17 @@ export default function Hero() {
               About Me
             </a>
           </motion.div>
+
+          {/* Film portfolio nudge */}
+          <motion.a
+            variants={fadeUpVariant}
+            href="https://film.menahishayan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-6 text-[#444] font-body text-xs italic hover:text-[#888] transition-colors duration-300"
+          >
+            pssst... i also make films ↗
+          </motion.a>
         </motion.div>
       </div>
 
