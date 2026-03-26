@@ -1,17 +1,18 @@
 import type { NextConfig } from "next";
 
-import createMDX from "@next/mdx";
-
 const nextConfig: NextConfig = {
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
+    ],
   },
 };
- 
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-});
 
-// Merge MDX config with Next.js config
-export default withMDX(nextConfig);
+export default nextConfig;
