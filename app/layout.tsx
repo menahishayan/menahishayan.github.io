@@ -32,6 +32,36 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Shayan Menahi",
+  alternateName: "Menahi Shayan",
+  url: "https://tech.menahishayan.com",
+  image: "https://film.menahishayan.com/images/portrait.jpg",
+  jobTitle: ["Entrepreneur", "Public Speaker", "Filmmaker"],
+  gender: "Male",
+  alumniOf: {
+    "@type": "OrganizationRole",
+    endDate: "2026",
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Northeastern University",
+      sameAs: "https://www.northeastern.edu/",
+    },
+  },
+  sameAs: [
+    "https://tech.menahishayan.com",
+    "https://film.menahishayan.com",
+    "https://www.imdb.com/name/nm18343686/",
+    "https://twitter.com/MenahiShayan",
+    "https://gitnation.com/person/shayan_136926",
+    "https://github.com/menahishayan",
+    "https://sessionize.com/menahishayan/",
+    "https://www.linkedin.com/in/menahi-shayan/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -43,6 +73,10 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable}`}
     >
       <body className="bg-[#080808] text-white font-body antialiased overflow-x-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
         <Analytics />
       </body>

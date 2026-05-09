@@ -21,7 +21,7 @@ export default function Testimonials() {
         >
           <motion.div variants={fadeUpVariant}>
             <SectionHeader
-              number="06"
+              number="07"
               title="Community"
               subtitle="What the React & tech community has said."
             />

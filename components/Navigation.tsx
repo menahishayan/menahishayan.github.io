@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Speaking", href: "#speaking" },
   { label: "Open Source", href: "#open-source" },
+  { label: "Press", href: "#press" },
 ];
 
 export default function Navigation() {

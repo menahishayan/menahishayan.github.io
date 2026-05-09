@@ -6,6 +6,7 @@ import Experience from "@/components/sections/Experience";
 import Speaking from "@/components/sections/Speaking";
 import PhotoGallery from "@/components/sections/PhotoGallery";
 import OpenSource from "@/components/sections/OpenSource";
+import Press from "@/components/sections/Press";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Speaking />
       <PhotoGallery />
       <OpenSource />
+      <Press />
       <Testimonials />
       <Contact />
     </main>

@@ -290,6 +290,62 @@ export const talkDetailsMap: Record<string, TalkDetails> = {
   },
 };
 
+// Press / news features
+export type PressFeature = {
+  outlet: string;
+  title: string;
+  url: string;
+  date: string;
+  quote?: string;
+  type?: "article" | "video";
+  embed?: string;
+};
+
+export const featuredPress: PressFeature = {
+  outlet: "Northeastern University",
+  title: "Northeastern Graduate Commencement Speech 2026",
+  url: "https://www.youtube.com/watch?v=3PmSmufsB14",
+  date: "April 2026",
+  type: "video",
+  embed: "https://www.youtube.com/embed/3PmSmufsB14",
+  quote:
+    "Change is inevitable, but the resilience to adapt is what keeps us on top. The strongest results come not from the resilience of doing the same thing until it works, but from doing a different thing, every time, until something does.",
+};
+
+export const pressFeatures: PressFeature[] = [
+  {
+    outlet: "Northeastern Global News",
+    title: "Commencement Speaker Quotes 2026",
+    url: "https://news.northeastern.edu/2026/04/29/commencement-speaker-quotes-2026/",
+    date: "Apr 29, 2026",
+    quote:
+      "Change is inevitable, but the resilience to adapt is what keeps us on top.",
+    type: "article",
+  },
+  {
+    outlet: "Northeastern Global News",
+    title: "Graduate Student Speaker — Commencement 2026",
+    url: "https://news.northeastern.edu/2026/04/29/graduate-student-speaker-commencement-2026/",
+    date: "Apr 29, 2026",
+    type: "article",
+  },
+  {
+    outlet: "Northeastern Global News",
+    title: "Northeastern Graduation Photos 2026",
+    url: "https://news.northeastern.edu/2026/04/24/northeastern-graduation-photos-2026/",
+    date: "Apr 24, 2026",
+    type: "article",
+  },
+  {
+    outlet: "TelcoTitans",
+    title:
+      "T‑Mobile says joint OpenAI platform now live, paying dividends",
+    url: "https://www.telcotitans.com/deutsche-telekomwatch/t-mobile-says-joint-openai-platform-now-live-paying-dividends/9819.article",
+    date: "2026",
+    type: "article",
+  },
+];
+
 // Marquee items for stats banner
 export const marqueeItems: MarqueeItem[] = [
   { text: "63% Support Escalation Reduction", isStat: true },
