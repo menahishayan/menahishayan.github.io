@@ -59,6 +59,7 @@ const personJsonLd = {
     "https://github.com/menahishayan",
     "https://sessionize.com/menahishayan/",
     "https://www.linkedin.com/in/menahi-shayan/",
+    "https://www.shayan.productions",
   ],
 };
 

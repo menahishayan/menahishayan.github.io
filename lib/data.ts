@@ -337,6 +337,22 @@ export const pressFeatures: PressFeature[] = [
     type: "article",
   },
   {
+    outlet: "Instagram",
+    title:
+      "We're still singing 'Long Live' thanks to graduate commencement speaker Menahi Shayan",
+    url: "https://www.instagram.com/p/DYAQTaYBERa/",
+    date: "May 6, 2026",
+    type: "article",
+  },
+  {
+    outlet: "LinkedIn",
+    title:
+      "We're still singing 'Long Live' thanks to graduate commencement speaker Menahi Shayan",
+    url: "https://www.linkedin.com/posts/were-still-singing-long-live-thanks-to-ugcPost-7457413794319908864-ELUO/",
+    date: "May 6, 2026",
+    type: "article",
+  },
+  {
     outlet: "TelcoTitans",
     title:
       "T‑Mobile says joint OpenAI platform now live, paying dividends",
