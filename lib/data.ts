@@ -315,6 +315,15 @@ export const featuredPress: PressFeature = {
 export const pressFeatures: PressFeature[] = [
   {
     outlet: "Northeastern Global News",
+    title: "Alan McKim of Clean Harbors says Northeastern changed his life",
+    url: "https://news.northeastern.edu/2026/04/29/alan-mckim-commencement-speech-2026/",
+    date: "Apr 29, 2026",
+    quote:
+      "In every moment we kept going when the easier path was to stop. Those shared struggles give us our sense of belonging.",
+    type: "article",
+  },
+  {
+    outlet: "Northeastern Global News",
     title: "Commencement Speaker Quotes 2026",
     url: "https://news.northeastern.edu/2026/04/29/commencement-speaker-quotes-2026/",
     date: "Apr 29, 2026",
