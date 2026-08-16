@@ -312,6 +312,40 @@ export const featuredPress: PressFeature = {
     "Change is inevitable, but the resilience to adapt is what keeps us on top. The strongest results come not from the resilience of doing the same thing until it works, but from doing a different thing, every time, until something does.",
 };
 
+export type CommencementPhoto = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
+export const commencementPhotos: CommencementPhoto[] = [
+  {
+    src: "/photos/commencement/shayan-menahi-commencement-speech.jpg",
+    alt: "Shayan Menahi delivering the Northeastern University graduate commencement speech 2026",
+    caption: "Delivering the graduate commencement address at Northeastern University, April 2026.",
+  },
+  {
+    src: "/photos/commencement/shayan-menahi-commencement-stage.jpg",
+    alt: "Shayan Menahi on stage with fellow honorees at Northeastern University commencement",
+    caption: "On stage with fellow student speakers during the commencement ceremony.",
+  },
+  {
+    src: "/photos/commencement/shayan-menahi-commencement-honorees.jpg",
+    alt: "Shayan Menahi with fellow Northeastern University commencement honorees and faculty",
+    caption: "With fellow honorees and faculty backstage at commencement.",
+  },
+  {
+    src: "/photos/commencement/shayan-menahi-graduation-cap-toss.jpg",
+    alt: "Shayan Menahi tossing his graduation cap outside Northeastern University",
+    caption: "Cap toss outside Northeastern University after graduating.",
+  },
+  {
+    src: "/photos/commencement/nutv-class-of-2026.jpg",
+    alt: "NUTV Northeastern University student film club Class of 2026 graduation photo",
+    caption: "Celebrating with the NUTV Class of 2026.",
+  },
+];
+
 export const pressFeatures: PressFeature[] = [
   {
     outlet: "Northeastern Global News",
