@@ -15,14 +15,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tech.menahishayan.com"),
   title: "Shayan Menahi — AI PM, Speaker, Builder",
   description:
     "AI Product Manager at T-Mobile. International public speaker. Open source builder. MS Engineering Management at Northeastern University.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Shayan Menahi — AI PM, Speaker, Builder",
     description:
       "AI PM at T-Mobile · International Speaker · Open Source Builder",
     type: "website",
+    url: "https://tech.menahishayan.com",
   },
   twitter: {
     card: "summary_large_image",
@@ -59,7 +64,7 @@ const personJsonLd = {
     "https://github.com/menahishayan",
     "https://sessionize.com/menahishayan/",
     "https://www.linkedin.com/in/menahi-shayan/",
-    "https://www.shayan.productions",
+    "https://shayan.productions",
   ],
 };
 
