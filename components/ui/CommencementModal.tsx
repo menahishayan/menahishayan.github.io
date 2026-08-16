@@ -177,7 +177,10 @@ export function CommencementModal({ press, photos, onClose }: CommencementModalP
               />
             </div>
             <figcaption className="mt-4 text-[#a0a0a0] font-body text-sm text-center max-w-2xl">
-              {photos[lightbox].caption}
+              {photos[lightbox].caption}{" "}
+              <span className="text-[#555555]">
+                Photo: {photos[lightbox].credit}
+              </span>
             </figcaption>
           </motion.figure>
 
