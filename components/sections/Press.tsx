@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { featuredPress, pressFeatures, PressFeature } from "@/lib/data";
+import { CommencementModal } from "@/components/ui/CommencementModal";
+import { featuredPress, pressFeatures, commencementPhotos, PressFeature } from "@/lib/data";
 import {
   fadeUpVariant,
   staggerContainer,
@@ -52,6 +53,7 @@ function PressCard({ item }: { item: PressFeature }) {
 
 export default function Press() {
   const [playing, setPlaying] = useState(false);
+  const [showCommencementModal, setShowCommencementModal] = useState(false);
   const videoId = featuredPress.embed
     ? getYouTubeId(featuredPress.embed)
     : null;
@@ -141,14 +143,23 @@ export default function Press() {
                     </blockquote>
                   )}
 
-                  <a
-                    href={featuredPress.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-display font-bold text-sm bg-gradient-to-r from-[#e91e8c] to-[#00a8ff] text-white hover:opacity-90 transition-opacity mt-auto"
-                  >
-                    Watch on YouTube →
-                  </a>
+                  <div className="flex flex-wrap gap-3 mt-auto">
+                    <a
+                      href={featuredPress.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-display font-bold text-sm bg-gradient-to-r from-[#e91e8c] to-[#00a8ff] text-white hover:opacity-90 transition-opacity"
+                    >
+                      Watch on YouTube →
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => setShowCommencementModal(true)}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-display font-semibold text-sm glass border border-white/10 text-[#a0a0a0] hover:text-white transition-colors"
+                    >
+                      View Photos & Story →
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,6 +179,14 @@ export default function Press() {
           </motion.div>
         </motion.div>
       </div>
+
+      {showCommencementModal && (
+        <CommencementModal
+          press={featuredPress}
+          photos={commencementPhotos}
+          onClose={() => setShowCommencementModal(false)}
+        />
+      )}
     </section>
   );
 }
