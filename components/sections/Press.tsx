@@ -160,6 +160,26 @@ export default function Press() {
                       View Photos & Story →
                     </button>
                   </div>
+
+                  <div className="grid grid-cols-5 gap-2 mt-6">
+                    {commencementPhotos.map((photo) => (
+                      <button
+                        key={photo.src}
+                        type="button"
+                        onClick={() => setShowCommencementModal(true)}
+                        aria-label={photo.alt}
+                        className="relative rounded-lg overflow-hidden aspect-square cursor-zoom-in group focus:outline-none focus:ring-2 focus:ring-[#e91e8c]"
+                      >
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 20vw, 120px"
+                        />
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
