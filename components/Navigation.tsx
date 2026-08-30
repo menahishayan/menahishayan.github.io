@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Open Source", href: "#open-source" },
-  { label: "Press", href: "#press" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Speaking", href: "/speaking" },
+  { label: "Open Source", href: "/open-source" },
+  { label: "Press", href: "/press" },
 ];
 
 export default function Navigation() {
@@ -38,7 +38,7 @@ export default function Navigation() {
         >
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             className="font-display font-bold text-white text-xl tracking-tight hover:text-[#e91e8c] transition-colors duration-200"
           >
             SM
@@ -60,7 +60,7 @@ export default function Navigation() {
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="#contact"
+              href="/#contact"
               className="hidden md:flex items-center gap-2 text-sm font-display font-semibold px-4 py-2 rounded-full border border-[#e91e8c]/50 text-[#e91e8c] hover:bg-[#e91e8c] hover:text-white transition-all duration-200"
             >
               Let&apos;s Talk →
@@ -119,7 +119,7 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
               className="mt-4 inline-flex items-center gap-2 text-sm font-display font-semibold px-4 py-2 rounded-full border border-[#e91e8c]/50 text-[#e91e8c]"
             >

@@ -76,7 +76,7 @@ const socialLinks = [
   },
 ];
 
-export default function Contact() {
+export default function Contact({ showNumber = true }: { showNumber?: boolean }) {
   return (
     <section id="contact" className="py-32 bg-[#080808]">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-16">
@@ -88,12 +88,14 @@ export default function Contact() {
           className="text-center"
         >
           {/* Section label */}
-          <motion.p
-            variants={fadeUpVariant}
-            className="text-[#e91e8c] font-display text-sm tracking-[0.3em] uppercase mb-6"
-          >
-            07 /
-          </motion.p>
+          {showNumber && (
+            <motion.p
+              variants={fadeUpVariant}
+              className="text-[#e91e8c] font-display text-sm tracking-[0.3em] uppercase mb-6"
+            >
+              07 /
+            </motion.p>
+          )}
 
           {/* Big headline */}
           <motion.h2
