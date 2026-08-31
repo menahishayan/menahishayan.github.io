@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TalkModal } from "@/components/ui/TalkModal";
-import { featuredTalk, pastTalks, talkDetailsMap, Talk } from "@/lib/data";
+import { featuredTalk, pastTalks, talkDetailsMap, getTalkSlug, Talk } from "@/lib/data";
 import { fadeUpVariant, staggerContainer, staggerContainerFast } from "@/lib/variants";
 
 function getVideoId(embedUrl: string): string {
@@ -83,7 +84,9 @@ function TalkCard({
         </p>
 
         <h3 className="font-display font-bold text-white text-base md:text-lg mb-1 leading-snug">
-          {details?.talkTitle ?? talk.title}
+          <Link href={`/speaking/${getTalkSlug(talk)}`} className="hover:text-gradient transition-all">
+            {details?.talkTitle ?? talk.title}
+          </Link>
         </h3>
 
         <p className="text-[#555555] text-xs font-display mb-3 text-[#777]">
@@ -130,6 +133,12 @@ function TalkCard({
               Details
             </button>
           )}
+          <Link
+            href={`/speaking/${getTalkSlug(talk)}`}
+            className="inline-flex items-center gap-1.5 text-sm font-display text-[#555555] hover:text-white transition-colors"
+          >
+            Full page →
+          </Link>
         </div>
       </div>
     </motion.div>
@@ -176,7 +185,9 @@ export default function Speaking() {
                       className="font-display font-bold text-white mb-3 leading-tight"
                       style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)" }}
                     >
-                      {featuredDetails?.talkTitle ?? featuredTalk.title}
+                      <Link href={`/speaking/${getTalkSlug(featuredTalk)}`} className="hover:text-gradient transition-all">
+                        {featuredDetails?.talkTitle ?? featuredTalk.title}
+                      </Link>
                     </h3>
 
                     <p className="text-[#a0a0a0] font-body text-base leading-relaxed mb-5 max-w-2xl">
@@ -220,6 +231,12 @@ export default function Speaking() {
                     >
                       Full Details
                     </button>
+                    <Link
+                      href={`/speaking/${getTalkSlug(featuredTalk)}`}
+                      className="text-center text-xs font-display text-[#555555] hover:text-white transition-colors"
+                    >
+                      View full page →
+                    </Link>
                   </div>
                 </div>
               </div>

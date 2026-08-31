@@ -4,14 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeUpVariant, staggerContainer } from "@/lib/variants";
-
-const photos = [
-  { src: "/photos/02.jpg", alt: "React India 2023 — talk session" },
-  { src: "/photos/05.jpg", alt: "React India 2023 — speaker moment" },
-  { src: "/photos/06.jpg", alt: "React India 2023 — backstage" },
-  { src: "/photos/07.jpg", alt: "React India 2023 — conference" },
-  { src: "/photos/08.jpg", alt: "React India 2023 — crowd" },
-];
+import { reactIndiaPhotos as photos } from "@/lib/data";
 
 export default function PhotoGallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
