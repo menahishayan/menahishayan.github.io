@@ -8,6 +8,10 @@ const pages = [
   { label: "Press", href: "/press" },
 ];
 
+function toHomeAnchor(href: string): string {
+  return `/#${href.replace(/^\//, "")}`;
+}
+
 export function PageCrossLinks({ current }: { current: string }) {
   const links = pages.filter((p) => p.href !== current);
 
@@ -19,15 +23,15 @@ export function PageCrossLinks({ current }: { current: string }) {
       </p>
       <div className="flex flex-wrap gap-x-6 gap-y-3">
         <Link
-          href="/"
+          href={toHomeAnchor(current)}
           className="text-[#a0a0a0] hover:text-white text-sm font-body transition-colors"
         >
-          Full portfolio →
+          ← Full portfolio
         </Link>
         {links.map((link) => (
           <Link
             key={link.href}
-            href={link.href}
+            href={toHomeAnchor(link.href)}
             className="text-[#a0a0a0] hover:text-white text-sm font-body transition-colors"
           >
             {link.label} →

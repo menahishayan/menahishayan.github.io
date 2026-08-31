@@ -1,10 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { openSourceProjects, OpenSourceProject } from "@/lib/data";
 import { fadeUpVariant, staggerContainer, staggerContainerFast } from "@/lib/variants";
+
+const OpenSourceModal = dynamic(
+  () => import("@/components/ui/OpenSourceModal").then((m) => m.OpenSourceModal),
+  { ssr: false },
+);
 
 function formatStars(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
@@ -39,22 +47,30 @@ function getDisplayTags(stack: string[]): string[] {
 function ProjectCard({
   project,
   featured,
+  onOpen,
 }: {
   project: OpenSourceProject;
   featured?: boolean;
+  onOpen: (project: OpenSourceProject) => void;
 }) {
   const tags = getDisplayTags(project.tech_stack);
   const isCreator = project.role === "Creator";
   const hasStars = project.stars > 0;
 
   return (
-    <motion.a
-      href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
+      role="button"
+      tabIndex={0}
+      onClick={() => onOpen(project)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen(project);
+        }
+      }}
       variants={fadeUpVariant}
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-      className={`glass rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/[0.05] transition-all duration-300 group cursor-pointer ${
+      className={`text-left glass rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/[0.05] transition-all duration-300 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#e91e8c] ${
         featured ? "border-l-2 border-[#00a8ff]/50" : ""
       }`}
     >
@@ -74,7 +90,13 @@ function ProjectCard({
         )}
         <div className="flex-1 min-w-0">
           <h3 className="font-display font-bold text-white text-base md:text-lg leading-snug group-hover:text-gradient transition-all truncate">
-            {project.repo_name}
+            <Link
+              href={`/open-source/${project.slug}`}
+              onClick={(e) => e.stopPropagation()}
+              className="hover:underline"
+            >
+              {project.repo_name}
+            </Link>
           </h3>
           <p className="text-[#555555] text-xs font-body mt-0.5">{project.org}</p>
         </div>
@@ -125,12 +147,24 @@ function ProjectCard({
           {project.role}
         </span>
       </div>
-    </motion.a>
+
+      {/* GitHub link */}
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-[#00a8ff] hover:underline"
+      >
+        View on GitHub ↗
+      </a>
+    </motion.div>
   );
 }
 
 export default function OpenSource() {
   const [featured, ...rest] = openSourceProjects;
+  const [selectedProject, setSelectedProject] = useState<OpenSourceProject | null>(null);
 
   return (
     <section id="open-source" className="py-32 bg-[#060606]">
@@ -158,16 +192,25 @@ export default function OpenSource() {
           >
             {/* Featured project spans full 2 columns on md */}
             <div className="md:col-span-2">
-              <ProjectCard project={featured} featured />
+              <ProjectCard project={featured} featured onOpen={setSelectedProject} />
             </div>
 
             {/* Rest of projects */}
             {rest.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <ProjectCard key={project.slug} project={project} onOpen={setSelectedProject} />
             ))}
           </motion.div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {selectedProject && (
+          <OpenSourceModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

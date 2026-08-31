@@ -1,5 +1,6 @@
 import rawProjects from "../cms/open_source.json";
 import rawTalks from "../cms/talks/index.json";
+import { slugify } from "./slug";
 
 export type Talk = {
   title: string;
@@ -25,6 +26,7 @@ export type TalkDetails = {
 export type OpenSourceProject = {
   title: string;
   content?: string;
+  readme?: string;
   url: string;
   image?: string;
   org: string;
@@ -65,8 +67,45 @@ export const talks: Talk[] = allTalks.filter((t) => !t.isHidden);
 export const featuredTalk: Talk = talks[0]; // React Summit 2025
 export const pastTalks: Talk[] = talks.slice(1);
 
+export function getTalkSlug(talk: Talk): string {
+  return slugify(talk.title);
+}
+
+export function getTalkBySlug(slug: string): Talk | undefined {
+  return talks.find((t) => getTalkSlug(t) === slug);
+}
+
 // Open Source from CMS, sorted by stars
 export const openSourceProjects: OpenSourceProject[] = (rawProjects as OpenSourceProject[]).sort((a, b) => b.stars - a.stars);
+
+export function getProjectBySlug(slug: string): OpenSourceProject | undefined {
+  return openSourceProjects.find((p) => p.slug === slug);
+}
+
+export type Photo = { src: string; alt: string };
+
+export const reactIndiaPhotos: Photo[] = [
+  {
+    src: "/photos/react-india-2023/shayan-menahi-react-india-2023-talk-session.jpg",
+    alt: "Shayan Menahi speaking on stage at React India 2023 in Goa",
+  },
+  {
+    src: "/photos/react-india-2023/shayan-menahi-react-india-2023-speaker-moment.jpg",
+    alt: "Shayan Menahi presenting to the audience at React India 2023",
+  },
+  {
+    src: "/photos/react-india-2023/shayan-menahi-react-india-2023-backstage.jpg",
+    alt: "Shayan Menahi backstage at React India 2023 conference",
+  },
+  {
+    src: "/photos/react-india-2023/shayan-menahi-react-india-2023-conference.jpg",
+    alt: "Shayan Menahi at the React India 2023 conference venue",
+  },
+  {
+    src: "/photos/react-india-2023/shayan-menahi-react-india-2023-crowd.jpg",
+    alt: "Audience crowd at Shayan Menahi's React India 2023 talk",
+  },
+];
 
 // Work Experience (defined inline since work_exp.json is empty)
 export const workExperience: WorkExperience[] = [

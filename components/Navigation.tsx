@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Experience", href: "/experience" },
-  { label: "Speaking", href: "/speaking" },
-  { label: "Open Source", href: "/open-source" },
-  { label: "Press", href: "/press" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Speaking", href: "/#speaking" },
+  { label: "Open Source", href: "/#open-source" },
+  { label: "Press", href: "/#press" },
 ];
 
 export default function Navigation() {

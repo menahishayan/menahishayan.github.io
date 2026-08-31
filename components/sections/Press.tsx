@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CommencementModal } from "@/components/ui/CommencementModal";
 import { featuredPress, pressFeatures, commencementPhotos, PressFeature } from "@/lib/data";
@@ -159,6 +160,12 @@ export default function Press() {
                     >
                       View Photos & Story →
                     </button>
+                    <Link
+                      href="/press/commencement"
+                      className="inline-flex items-center gap-2 text-xs font-display text-[#555555] hover:text-white transition-colors self-center"
+                    >
+                      Full page →
+                    </Link>
                   </div>
 
                   <div className="grid grid-cols-5 gap-2 mt-6">

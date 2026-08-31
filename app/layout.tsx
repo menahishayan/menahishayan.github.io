@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { HashScrollFix } from "@/components/HashScrollFix";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -84,6 +85,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         {children}
+        <HashScrollFix />
         <Analytics />
       </body>
     </html>

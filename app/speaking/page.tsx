@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Speaking from "@/components/sections/Speaking";
+import PhotoGallery from "@/components/sections/PhotoGallery";
 import Contact from "@/components/sections/Contact";
 import { PageCrossLinks } from "@/components/ui/PageCrossLinks";
 
@@ -27,6 +28,7 @@ export default function SpeakingPage() {
       <div className="pt-24">
         <Speaking />
       </div>
+      <PhotoGallery />
       <PageCrossLinks current="/speaking" />
       <Contact showNumber={false} />
     </main>
